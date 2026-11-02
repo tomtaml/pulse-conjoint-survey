@@ -8,8 +8,8 @@
     "node": ">=20"
   },
   "scripts": {
-    "check": "node --check public/app.mjs && node --check public/engine.mjs && node --test tests/software.test.mjs",
-    "test": "node --test tests/software.test.mjs",
+    "check": "node --check public/app.mjs && node --check public/engine.mjs && node --test tests/software.test.mjs tests/survey.test.mjs",
+    "test": "node --test tests/software.test.mjs tests/survey.test.mjs",
     "dev": "python3 -m http.server 8000 --directory public"
   }
 }

@@ -17,8 +17,6 @@ wrangler.local.toml
 
 # Local content backups and test-session exports
 .review-backups/
-public/survey.json
-tests/survey.test.mjs
 source-documents/
 .private/
 pulse-version-a-test-session*.json

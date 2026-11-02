@@ -146,7 +146,7 @@ export function exportSession(data,state,clock) {
   const r=derive(state.answers),visible=new Set(pathFor(data,state).flatMap(s=>s.question_ids||[])),order=pathFor(data,state).filter(s=>s.kind==='choice').map(s=>s.id);
   const statuses=Object.fromEntries(data.questions.map(q=>[q.id,!visible.has(q.id)?'not_shown':state.answers[q.id]===undefined?'unfinished':state.answers[q.id]===99||includes(state.answers[q.id],99)?'declined':'answered']));
   if(r.chargingMain.status==='derived_from_single_location')statuses['A-CHG-MAIN']='derived_from_single_location';
-  return {purpose:'private_draft_walkthrough',complete:state.finished,versions:data.meta,screener_status:'not_administered_in_this_fragment',answers:state.answers,response_status:statuses,derived:{...r,journey_selection:'respondent_chosen',hypothetical_mode_flag:r.hypothetical?1:0},displayed_prompts:state.renderedPrompts,
+  return {purpose:'partner_draft_walkthrough',complete:state.finished,versions:data.meta,screener_status:'not_administered_in_this_fragment',answers:state.answers,response_status:statuses,derived:{...r,journey_selection:'respondent_chosen',hypothetical_mode_flag:r.hypothetical?1:0},displayed_prompts:state.renderedPrompts,
     choices:data.tasks.map(task=>r.transport?{...(state.choiceSnapshots[task.id]||taskSnapshot(task,state.answers,state.seed,data.meta.design_version)),task_order:order.indexOf(task.id),selected:state.choices[task.id]??null,status:state.choices[task.id]===undefined?'unfinished':'answered'}:{task_id:task.id,practice:task.practice,selected:96,status:'not_assigned'}),
     timing:{definition:'Active visible-tab respondent time; excludes pauses and comment editing; includes revisits.',...clock},comments:state.notes};
 }

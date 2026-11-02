@@ -1,6 +1,6 @@
 # PULSE conjoint survey
 
-Application software for the PULSE Version A citizen-survey walkthrough. It supports wording, routing and timing review before fieldwork programming. Questionnaire text and source-derived instrument fixtures are excluded from this public repository pending explicit release authorisation.
+PULSE Version A citizen-survey walkthrough for wording, routing and timing review before fieldwork programming. The questionnaire text, numerical transport DCE profiles and study-specific test fixtures are included following explicit public-release authorisation on 2 November 2026.
 
 The sequence follows the draft:
 
@@ -13,7 +13,7 @@ The frontend has sequential Back/Continue navigation, screen-specific comments, 
 
 ## Preview
 
-The current hosted walkthrough is private and requires the owner's ChatGPT sign-in:
+The partner demo is hosted at:
 
 https://pulse-version-a-walkthrough.moderntern.chatgpt.site/
 
@@ -25,7 +25,7 @@ This GitHub import does not redeploy or change that Worker. The original `tomtam
 
 ## Run locally
 
-Node 20+ is sufficient for checks. Python 3 serves the static frontend locally. No package installation or build is required. To run the study itself, first supply an authorised `public/survey.json` file; a fresh clone deliberately excludes that research content. Without it, the frontend reports that survey content could not be loaded. The public software tests use fabricated examples and need no study file.
+Node 20+ is sufficient for checks. Python 3 serves the static frontend locally. No package installation or build is required. The included `public/survey.json` supplies the Version A draft. Tests cover the software components and the study-specific routes and numerical profiles.
 
 ```bash
 npm run check
@@ -36,7 +36,7 @@ Open http://localhost:8000/ after starting the local server.
 
 ## Content and routing
 
-An authorised local `public/survey.json` supplies the questionnaire, response options, introductory text and experimental profiles. That file and the study-specific test fixtures remain untracked pending public-release approval. The application provides these routing behaviours:
+`public/survey.json` supplies 56 question records: 55 from the supplied Version A draft and one clarification that explicitly confirms an already-used alternative mode. It includes 22 COM-B/intention ratings, one transport practice and four scored transport tasks. All 60 numerical profile values were checked against the draft and previous P09/D15 review data. The application provides these routing behaviours:
 
 - Non-car users and non-drivers remain in the survey. Transport choices depend on trip-specific feasibility.
 - Purpose-specific mode questions appear only for purposes with reported journeys.
@@ -56,7 +56,7 @@ At the end, Download comments and timing produces a TXT file to share with the r
 
 ## Cloudflare integration
 
-This initial repository contains the frontend software; the study content is supplied separately with the necessary authorisation. The existing Worker source, guarded deployment scripts and D1 bindings remain in the already configured local Cloudflare project. They are not reconstructed or replaced by this import.
+This repository contains the reviewed frontend and study content. The existing Worker source, guarded deployment scripts and D1 bindings remain in the already configured local Cloudflare project. They are not reconstructed or replaced by this import.
 
 To update that deployment, integrate the `public/` files into the existing project while retaining its Worker, Wrangler configuration, D1 binding and collection controls. Review the diff and use that project's established checks/deployment commands. No database migration is needed for this browser-only walkthrough. Do not replace the deployed configuration with an unbound generic Wrangler template.
 
