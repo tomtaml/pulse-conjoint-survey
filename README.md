@@ -58,7 +58,7 @@ At the end, Download comments and timing produces a TXT file to share with the r
 
 This repository contains the reviewed frontend and study content. The existing Worker source, guarded deployment scripts and D1 bindings remain in the already configured local Cloudflare project. They are not reconstructed or replaced by this import.
 
-To update that deployment, integrate the `public/` files into the existing project while retaining its Worker, Wrangler configuration, D1 binding and collection controls. Review the diff and use that project's established checks/deployment commands. No database migration is needed for this browser-only walkthrough. Do not replace the deployed configuration with an unbound generic Wrangler template.
+The guarded frontend installer and read-only D1 schema audit are documented in [CLOUDFLARE-UPDATE.md](CLOUDFLARE-UPDATE.md). They validate the separate survey Worker and database identities, preserve the existing backend and configuration, and make no migrations or deployments. Live Cloudflare verification and updating the existing `workers.dev` deployment remain pending because Cloudflare rejected this session's browser sign-in with a 403.
 
 ## Licence
 

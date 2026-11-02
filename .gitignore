@@ -25,3 +25,4 @@ pulse-partner-notes*.json
 *.sqlite
 *.sqlite3
 *.db
+.guard-test-*/
