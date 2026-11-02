@@ -2,7 +2,9 @@
 
 The public partner demo is linked from the README. It keeps test answers and comments in the reviewer's browser tab and makes no database submissions.
 
-Live Cloudflare bindings, D1 schema, secrets and settings have **not** been verified in this session: Cloudflare rejected the cloud-browser login with a 403. No Cloudflare deployment, migration, settings change, database creation, deletion or record copying was performed for this release.
+Version A was deployed to the existing, separate survey Worker through the owner's configured local project on 2 November 2026. Owner-provided dashboard and Wrangler checks confirmed the production database binding, expected database UUID, EU jurisdiction, all 13 submission columns and both indexes from the original application's initial migration. The guarded installer reported a frontend backup and verified that the backend and configuration files were unchanged. Deployment output retained disabled collection and free text, the development environment and existing Turnstile variables.
+
+A complete browser walkthrough on the deployed Worker passed: backgrounds, practice and four scored transport cards, ordinary-journey COM-B, the explicit already-used-mode clarification, a non-driver household plug-in charging route with multiple locations, saved comments, paused comment-entry timing, the completion summary and both feedback download controls. This is a functional review, not a completion-time estimate. The original application was left unchanged. No database migration, respondent-record copy or collection activation was part of this release; a comparison with every table in the current original live database remains outside the verified scope.
 
 ## Keep resource identities local
 

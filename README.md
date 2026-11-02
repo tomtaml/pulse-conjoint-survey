@@ -13,15 +13,15 @@ The frontend has sequential Back/Continue navigation, screen-specific comments, 
 
 ## Preview
 
-The partner demo is hosted at:
-
-https://pulse-version-a-walkthrough.moderntern.chatgpt.site/
-
-The earlier Cloudflare Worker remains at:
+The shareable Version A partner demo is deployed at:
 
 https://pulse-conjoint-survey.tom-tamlander.workers.dev/
 
-This GitHub import does not redeploy or change that Worker. The original `tomtaml/pulseapp` project is separate.
+An additional hosted preview is available at:
+
+https://pulse-version-a-walkthrough.moderntern.chatgpt.site/
+
+The existing survey Worker was updated through the owner's configured local deployment project on 2 November 2026. The original `tomtaml/pulseapp` project was left unchanged.
 
 ## Run locally
 
@@ -58,7 +58,7 @@ At the end, Download comments and timing produces a TXT file to share with the r
 
 This repository contains the reviewed frontend and study content. The existing Worker source, guarded deployment scripts and D1 bindings remain in the already configured local Cloudflare project. They are not reconstructed or replaced by this import.
 
-The guarded frontend installer and read-only D1 schema audit are documented in [CLOUDFLARE-UPDATE.md](CLOUDFLARE-UPDATE.md). They validate the separate survey Worker and database identities, preserve the existing backend and configuration, and make no migrations or deployments. Live Cloudflare verification and updating the existing `workers.dev` deployment remain pending because Cloudflare rejected this session's browser sign-in with a 403.
+The guarded frontend installer and read-only D1 schema audit are documented in [CLOUDFLARE-UPDATE.md](CLOUDFLARE-UPDATE.md). They validate the separate survey Worker and database identities, preserve the existing backend and configuration, and make no migrations or deployments. Deployment to the existing survey Worker is complete. Owner-provided dashboard and Wrangler checks verified its production database binding, expected database UUID, EU jurisdiction and submission schema against the original application's initial migration. Deployment output retained disabled collection and free text, the development environment and the existing Turnstile variables. A complete browser walkthrough on the deployed Worker passed, including all five transport cards, COM-B, the non-driver household charging route, comments, timing and both feedback download controls. These checks do not assert that every table or later schema change in the original live database has been copied.
 
 ## Licence
 
