@@ -1,0 +1,65 @@
+# PULSE conjoint survey
+
+Application software for the PULSE Version A citizen-survey walkthrough. It supports wording, routing and timing review before fieldwork programming. Questionnaire text and source-derived instrument fixtures are excluded from this public repository pending explicit release authorisation.
+
+The sequence follows the draft:
+
+1. Mobility background, journey purposes and one ordinary journey.
+2. A hypothetical 2030 transport experiment: one practice and four scored choices.
+3. Ordinary-journey COM-B, intention and observed behaviour.
+4. Parking opportunity and routed household BEV/PHEV charging experience.
+
+The frontend has sequential Back/Continue navigation, screen-specific comments, active-time measurement and local review exports. Test answers remain in per-tab browser storage. No response API, analytics or D1 submission is implemented in this frontend.
+
+## Preview
+
+The current hosted walkthrough is private and requires the owner's ChatGPT sign-in:
+
+https://pulse-version-a-walkthrough.moderntern.chatgpt.site/
+
+The earlier Cloudflare Worker remains at:
+
+https://pulse-conjoint-survey.tom-tamlander.workers.dev/
+
+This GitHub import does not redeploy or change that Worker. The original `tomtaml/pulseapp` project is separate.
+
+## Run locally
+
+Node 20+ is sufficient for checks. Python 3 serves the static frontend locally. No package installation or build is required. To run the study itself, first supply an authorised `public/survey.json` file; a fresh clone deliberately excludes that research content. Without it, the frontend reports that survey content could not be loaded. The public software tests use fabricated examples and need no study file.
+
+```bash
+npm run check
+npm run dev
+```
+
+Open http://localhost:8000/ after starting the local server.
+
+## Content and routing
+
+An authorised local `public/survey.json` supplies the questionnaire, response options, introductory text and experimental profiles. That file and the study-specific test fixtures remain untracked pending public-release approval. The application provides these routing behaviours:
+
+- Non-car users and non-drivers remain in the survey. Transport choices depend on trip-specific feasibility.
+- Purpose-specific mode questions appear only for purposes with reported journeys.
+- One actual ordinary journey is recorded before the DCE. The candidate alternative mode is chosen after the DCE.
+- Habit ratings use the actual usual mode. Other COM-B ratings use the confirmed candidate alternative.
+- No recurring journey skips dependent COM-B; no confirmed alternative skips its dependent ratings without treating missing applicability as low motivation.
+- Household BEV/PHEV access and charging knowledge determine actual-charging questions. A single reported charging location is derived as the main one with a flag; multiple locations prompt an explicit selection.
+- Changing a journey or mode removes answers with an obsolete referent. Changing the transport offer set removes choices from the old set.
+
+The application is a prototype for draft review. Production instrument selection, participant information, ethics activation and experimental-design approval remain separate decisions.
+
+## Timing and comments
+
+Timing begins on Start walkthrough and counts active visible-tab time, including revisits. Hidden tabs, manual pauses and comment editing pause respondent timing. Reloading requires Resume so time away is excluded.
+
+At the end, Download comments and timing produces a TXT file to share with the research team. Test-session JSON additionally contains canonical answers, route/status information, actual displayed profiles and permutations, practice flags and durations. Unassigned DCE tasks are 96; unfinished assigned tasks are null. This is usability timing, not a validated completion-time estimate.
+
+## Cloudflare integration
+
+This initial repository contains the frontend software; the study content is supplied separately with the necessary authorisation. The existing Worker source, guarded deployment scripts and D1 bindings remain in the already configured local Cloudflare project. They are not reconstructed or replaced by this import.
+
+To update that deployment, integrate the `public/` files into the existing project while retaining its Worker, Wrangler configuration, D1 binding and collection controls. Review the diff and use that project's established checks/deployment commands. No database migration is needed for this browser-only walkthrough. Do not replace the deployed configuration with an unbound generic Wrangler template.
+
+## Licence
+
+Software is licensed under MIT; see `LICENSE`. Research-instrument content is documented separately in `CONTENT-LICENSING.md`; third-party materials retain their applicable terms. Participant responses, credentials, local Cloudflare state and test exports do not belong in the public repository.

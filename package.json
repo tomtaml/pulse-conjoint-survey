@@ -1,0 +1,15 @@
+{
+  "name": "pulse-conjoint-survey",
+  "version": "0.2.0",
+  "private": true,
+  "description": "PULSE citizen survey prototype with COM-B questions and transport choice experiments",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "check": "node --check public/app.mjs && node --check public/engine.mjs && node --test tests/software.test.mjs",
+    "test": "node --test tests/software.test.mjs",
+    "dev": "python3 -m http.server 8000 --directory public"
+  }
+}

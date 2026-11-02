@@ -1,0 +1,29 @@
+# Dependencies and generated files
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Local credentials and Cloudflare state
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+.wrangler/
+wrangler.local.jsonc
+wrangler.local.toml
+
+# Local content backups and test-session exports
+.review-backups/
+public/survey.json
+tests/survey.test.mjs
+source-documents/
+.private/
+pulse-version-a-test-session*.json
+pulse-version-a-comments-and-timing*.txt
+pulse-partner-notes*.json
+*.sqlite
+*.sqlite3
+*.db
