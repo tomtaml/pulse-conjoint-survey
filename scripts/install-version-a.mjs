@@ -21,7 +21,8 @@ try {
   const identity = readIdentity(identityFile), target = identity.target;
   const project = inspectProject(destination, identity);
   if (project.assetPath !== path.join(project.root, 'public')) throw new Error('This installer supports the existing public/ asset directory only.');
-  const source = fileURLToPath(new URL('../public/', import.meta.url));
+  const legacy = fileURLToPath(new URL('../public/v1/', import.meta.url));
+  const source = existsSync(legacy) ? legacy : fileURLToPath(new URL('../public/', import.meta.url));
   if (path.resolve(source) === project.assetPath) throw new Error('Choose the separate, already configured Cloudflare project as the destination.');
   const content = Object.fromEntries(assets.map(name => [name, readFileSync(path.join(source, name))]));
   const changed = assets.filter(name => !existsSync(path.join(project.assetPath, name)) || !content[name].equals(readFileSync(path.join(project.assetPath, name))));

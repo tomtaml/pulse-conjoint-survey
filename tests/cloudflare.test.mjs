@@ -57,7 +57,7 @@ test('dry-run creates no assets or backup and apply preserves the backend, confi
   assert.equal(readFileSync(path.join(folder, 'public', 'index.html'), 'utf8'), 'previous frontend');
   assert(!readdirSync(folder).includes('.review-backups'));
   const applied = install(folder, '--apply'); assert.equal(applied.status, 0, applied.stderr);
-  for (const name of assets) assert.equal(readFileSync(path.join(folder, 'public', name), 'utf8'), readFileSync(path.join(root, 'public', name), 'utf8'));
+  for (const name of assets) assert.equal(readFileSync(path.join(folder, 'public', name), 'utf8'), readFileSync(path.join(root, 'public', 'v1', name), 'utf8'));
   for (const name of protectedNames) assert.equal(readFileSync(path.join(folder, name), 'utf8'), before[name]);
   assert.equal(readFileSync(path.join(folder, 'public', 'keep.svg'), 'utf8'), '<svg/>');
   const backup = path.join(folder, '.review-backups', readdirSync(path.join(folder, '.review-backups'))[0]);

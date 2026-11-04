@@ -1,0 +1,3120 @@
+{
+  "meta": {
+    "version": "pulse-version-a-0.2-2026-11-02",
+    "design_version": "transport-prototype-2026-10-14",
+    "language": "en",
+    "mode": "partner_review_demo",
+    "scope": "Parts A–D only; screening/consent, technology concepts, TAM, technology DCE, values and closing demographics are outside this fragment",
+    "source_document": "PULSE_WP1_Survey_Version_A_Background_Transport_DCE_COMB_Charging_Draft_02(1).docx",
+    "source_sha256": "8b1d8fa9104c30d60192595b5f331dc8d1262a4352a03f861687241ffbe5db97",
+    "coding_note": "P09 routing-critical semantic codes are retained. Codes for new purpose, mode and COM-B items are proposed programming mappings."
+  },
+  "questions": [
+    {
+      "id": "A-MOB-01",
+      "section": "A",
+      "text": "Which transport options do you use in a usual week? Select all that apply.",
+      "type": "multi",
+      "route": "always",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Walking or wheeling",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Cycling (including e-bike)",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Bus, tram, metro or rail",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Private car or light van as driver",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Private car or light van as passenger",
+          "exclusive": false
+        },
+        {
+          "code": 6,
+          "label": "Shared or rental car",
+          "exclusive": false
+        },
+        {
+          "code": 7,
+          "label": "Taxi or assisted transport",
+          "exclusive": false
+        },
+        {
+          "code": 8,
+          "label": "Other",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "None",
+          "exclusive": true
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "A-MOB-PRIMARY",
+      "section": "A",
+      "text": "Which ONE of these options do you use most often for everyday journeys? Select one.",
+      "type": "single",
+      "route": "always",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Walking or wheeling",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Cycling (including e-bike)",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Bus, tram, metro or rail",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Private car or light van as driver",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Private car or light van as passenger",
+          "exclusive": false
+        },
+        {
+          "code": 6,
+          "label": "Shared or rental car",
+          "exclusive": false
+        },
+        {
+          "code": 7,
+          "label": "Taxi or assisted transport",
+          "exclusive": false
+        },
+        {
+          "code": 8,
+          "label": "Other",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "No usual journeys",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot choose one",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "option_filter": "used_modes"
+    },
+    {
+      "id": "A-MOB-02",
+      "section": "A",
+      "text": "Which transport options could you realistically use for a usual trip if needed? Select all that apply.",
+      "type": "multi",
+      "route": "always",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Walking or wheeling",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Cycling (including e-bike)",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Bus, tram, metro or rail",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Private car or light van as driver",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Private car or light van as passenger",
+          "exclusive": false
+        },
+        {
+          "code": 6,
+          "label": "Shared or rental car",
+          "exclusive": false
+        },
+        {
+          "code": 7,
+          "label": "Taxi or assisted transport",
+          "exclusive": false
+        },
+        {
+          "code": 8,
+          "label": "Other",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "None",
+          "exclusive": true
+        },
+        {
+          "code": 98,
+          "label": "Do not know",
+          "exclusive": true
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "A-VEH-01",
+      "section": "A",
+      "text": "On how many days in a usual week do you use a car or light van, either as driver or passenger?",
+      "type": "single",
+      "route": "always",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "0",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Less than one day per week",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "1–2 days",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "3–4 days",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "5–7 days",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "R-DRIVE-01",
+      "section": "A",
+      "text": "Do you currently drive a car or light van at least occasionally?",
+      "type": "single",
+      "route": "always",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Yes",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "No",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "A-VEH-ACCESS-01",
+      "section": "A",
+      "text": "Do you personally or through your household have regular access to a car or light van?",
+      "type": "single",
+      "route": "always",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Yes, whenever needed",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Yes, but shared or limited access",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "No",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "A-EV-ACCESS-01",
+      "section": "A",
+      "text": "Do you personally or through your household have regular access to a battery-electric or plug-in hybrid vehicle?",
+      "type": "single",
+      "route": "always",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Yes, battery-electric",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Yes, plug-in hybrid",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Yes, both or other plug-in vehicle",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "No",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Do not know",
+          "exclusive": true
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "A-OPP-01",
+      "section": "A",
+      "text": "Which parking or charging arrangements are realistically available for a vehicle you use or share? Select all that apply.",
+      "type": "multi",
+      "route": "always",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Home/off-street",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Home/on-street",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Workplace",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Public charging",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Other",
+          "exclusive": false
+        },
+        {
+          "code": 96,
+          "label": "No practical charging access",
+          "exclusive": true
+        },
+        {
+          "code": 97,
+          "label": "No relevant vehicle",
+          "exclusive": true
+        },
+        {
+          "code": 98,
+          "label": "Do not know",
+          "exclusive": true
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "A-AFF-01",
+      "section": "A",
+      "text": "How much do the costs of your usual transport restrict which options you can use?",
+      "type": "single",
+      "route": "always",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Not at all",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "A little",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "A moderate amount",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Quite a lot",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Very much",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "A-FUT-ROLE",
+      "section": "A",
+      "text": "Could you realistically be involved in choosing or using a car or its charging services for yourself or your household within the next five years?",
+      "type": "single",
+      "route": "always",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Yes",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "No",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Do not know",
+          "exclusive": true
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "A-PUR-01",
+      "section": "A",
+      "text": "How often do you make a journey mainly for each of these purposes?",
+      "type": "matrix",
+      "route": "always",
+      "required": true,
+      "options": [
+        {
+          "code": 0,
+          "label": "Never",
+          "exclusive": false
+        },
+        {
+          "code": 1,
+          "label": "Less than once a month",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "1–3 times a month",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "About once a week",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "2–4 days a week",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "5 or more days a week",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot recall",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "rows": [
+        {
+          "id": "work",
+          "label": "Work or education",
+          "description": "Commuting, training or regular classes"
+        },
+        {
+          "id": "errands",
+          "label": "Shopping, services or caregiving",
+          "description": "Errands, appointments, escorting others or carrying goods"
+        },
+        {
+          "id": "leisure",
+          "label": "Leisure or social visits",
+          "description": "Friends or family, recreation or hobbies"
+        }
+      ]
+    },
+    {
+      "id": "A-PUR-02",
+      "section": "A",
+      "text": "Which ONE transport mode do you most commonly use for journeys of each purpose?",
+      "type": "matrix",
+      "route": "purpose_modes",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Walking or wheeling",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Cycling (including e-bike)",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Bus, tram, metro or rail",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Private car or light van as driver",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Private car or light van as passenger",
+          "exclusive": false
+        },
+        {
+          "code": 6,
+          "label": "Shared or rental car",
+          "exclusive": false
+        },
+        {
+          "code": 7,
+          "label": "Taxi or assisted transport",
+          "exclusive": false
+        },
+        {
+          "code": 8,
+          "label": "Other",
+          "exclusive": false
+        },
+        {
+          "code": 96,
+          "label": "It varies or I use different modes equally often",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable because I do not make such journeys",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "rows": [
+        {
+          "id": "work",
+          "label": "Work or education",
+          "description": "Commuting, training or regular classes"
+        },
+        {
+          "id": "errands",
+          "label": "Shopping, services or caregiving",
+          "description": "Errands, appointments, escorting others or carrying goods"
+        },
+        {
+          "id": "leisure",
+          "label": "Leisure or social visits",
+          "description": "Friends or family, recreation or hobbies"
+        }
+      ]
+    },
+    {
+      "id": "A-JRN-01",
+      "section": "A",
+      "text": "Which of the following best describes your selected regular journey?",
+      "type": "single",
+      "route": "always",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Work or education",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Shopping, services or caring responsibilities",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Leisure or social visits",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Other regular journey",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "No recurring journey in the past four weeks",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "A-JRN-02",
+      "section": "A",
+      "text": "Which transport option do you normally use for the longest part of this journey?",
+      "type": "single",
+      "route": "has_journey",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Walking or wheeling",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Cycling (including e-bike)",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Bus, tram, metro or rail",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Private car or light van as driver",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Private car or light van as passenger",
+          "exclusive": false
+        },
+        {
+          "code": 6,
+          "label": "Shared or rental car",
+          "exclusive": false
+        },
+        {
+          "code": 7,
+          "label": "Taxi or assisted transport",
+          "exclusive": false
+        },
+        {
+          "code": 8,
+          "label": "Other",
+          "exclusive": false
+        },
+        {
+          "code": 96,
+          "label": "It varies",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "A-JRN-03",
+      "section": "A",
+      "text": "About how far is this journey in one direction?",
+      "type": "single",
+      "route": "has_journey",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Under 2 km",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "2–4.9 km",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "5–9.9 km",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "10–19.9 km",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "20 km or more",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Do not know",
+          "exclusive": true
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "A-JRN-04",
+      "section": "A",
+      "text": "Do you normally combine this journey with other stops or responsibilities (for example, collecting someone, shopping or carrying equipment)?",
+      "type": "single",
+      "route": "has_journey",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Never",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Rarely",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Sometimes",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Often",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Always",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "A-JRN-05",
+      "section": "A",
+      "text": "About how often do you make this journey?",
+      "type": "single",
+      "route": "has_journey",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Less than weekly",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Once a week",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "2–3 times a week",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "4–5 times a week",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "More than five times a week",
+          "exclusive": false
+        },
+        {
+          "code": 6,
+          "label": "It varies",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "B-TRIP-CONTEXT",
+      "section": "B",
+      "text": "For a hypothetical 20 km one-way weekday trip in 2030, which purpose could you imagine?",
+      "type": "single",
+      "route": "always",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Work or education",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Shopping or services",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Visiting or leisure",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Other regular journey",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Cannot imagine this scenario",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "B-MODE-EVAL",
+      "section": "B",
+      "text": "For this hypothetical 20 km trip in 2030, which options could you realistically consider if offered? Select all that apply.",
+      "type": "multi",
+      "route": "transport_context",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Private EV, as driver or with an authorised household driver",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Shared EV, as driver or with an authorised household driver",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Accessible public transport",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "None of these",
+          "exclusive": true
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": true
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "C-ALT-01",
+      "section": "C",
+      "text": "Which option would you most realistically consider using more often for this journey, or continuing to use rather than relying on a private car?",
+      "type": "single",
+      "route": "has_journey",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Walking/wheeling",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Cycling",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "E-bike",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Public transport",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Shared vehicle service",
+          "exclusive": false
+        },
+        {
+          "code": 6,
+          "label": "I already use my preferred non-private-car option",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "None currently seems feasible",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "C-ALT-02",
+      "section": "C",
+      "text": "If better transport conditions existed, which option would be the most plausible for this journey?",
+      "type": "single",
+      "route": "conditional_mode",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Walking/wheeling",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Cycling",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "E-bike",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Public transport",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Shared vehicle service",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Still none",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "C-ALT-USED",
+      "section": "C",
+      "text": "Which non-private-car option are you already using for this journey?",
+      "type": "single",
+      "route": "confirm_used_mode",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Walking/wheeling",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Cycling",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "E-bike",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Public transport",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Shared vehicle service",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Programming clarification of Version A C1: explicitly confirm the already-used option instead of assigning a mode",
+      "proposal": true
+    },
+    {
+      "id": "C-PCAP-01",
+      "section": "C",
+      "text": "My physical abilities would allow me to make this journey using [MODE].",
+      "type": "rating",
+      "route": "alternative",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "PCAP"
+    },
+    {
+      "id": "C-PCAP-02",
+      "section": "C",
+      "text": "I could manage the physical activities required to use [MODE] for this journey.",
+      "type": "rating",
+      "route": "alternative",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "PCAP"
+    },
+    {
+      "id": "C-PCAP-03",
+      "section": "C",
+      "text": "I could regularly make this journey using [MODE] without the physical demands being too difficult for me.",
+      "type": "rating",
+      "route": "alternative",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "PCAP"
+    },
+    {
+      "id": "C-PSYC-01",
+      "section": "C",
+      "text": "I know how to plan this journey using [MODE].",
+      "type": "rating",
+      "route": "alternative",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "PSYC"
+    },
+    {
+      "id": "C-PSYC-02",
+      "section": "C",
+      "text": "I know how to use the travel information, services or equipment needed for this journey using [MODE].",
+      "type": "rating",
+      "route": "alternative",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "PSYC"
+    },
+    {
+      "id": "C-PSYC-03",
+      "section": "C",
+      "text": "I know how to adjust my travel plans if something unexpected disrupts this journey using [MODE].",
+      "type": "rating",
+      "route": "alternative",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "PSYC"
+    },
+    {
+      "id": "C-POPP-01",
+      "section": "C",
+      "text": "A realistic route or service for making this journey using [MODE] is available where I live.",
+      "type": "rating",
+      "route": "alternative",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "POPP"
+    },
+    {
+      "id": "C-POPP-02",
+      "section": "C",
+      "text": "The routes or services required to use [MODE] are available at the times I normally need to travel.",
+      "type": "rating",
+      "route": "alternative",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "POPP"
+    },
+    {
+      "id": "C-POPP-03",
+      "section": "C",
+      "text": "My current transport environment gives me a practical opportunity to make this journey using [MODE].",
+      "type": "rating",
+      "route": "alternative",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "POPP"
+    },
+    {
+      "id": "C-SOPP-01",
+      "section": "C",
+      "text": "People important to me would support my using [MODE] for this journey.",
+      "type": "rating",
+      "route": "alternative",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "SOPP"
+    },
+    {
+      "id": "C-SOPP-02",
+      "section": "C",
+      "text": "People whose opinions I value would approve of my using [MODE] for this journey.",
+      "type": "rating",
+      "route": "alternative",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "SOPP"
+    },
+    {
+      "id": "C-SOPP-03",
+      "section": "C",
+      "text": "People close to me would encourage me to use [MODE] for journeys like this.",
+      "type": "rating",
+      "route": "alternative",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "SOPP"
+    },
+    {
+      "id": "C-RMOT-01",
+      "section": "C",
+      "text": "Using [MODE] for this journey would be a good choice for me.",
+      "type": "rating",
+      "route": "alternative",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "RMOT"
+    },
+    {
+      "id": "C-RMOT-02",
+      "section": "C",
+      "text": "The advantages of using [MODE] for this journey would outweigh the disadvantages.",
+      "type": "rating",
+      "route": "alternative",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "RMOT"
+    },
+    {
+      "id": "C-RMOT-03",
+      "section": "C",
+      "text": "Using [MODE] for this journey would fit the way I want to travel in the future.",
+      "type": "rating",
+      "route": "alternative",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "RMOT"
+    },
+    {
+      "id": "C-HAB-01",
+      "section": "C",
+      "text": "When making this journey, I tend to choose [CURRENT MODE] automatically.",
+      "type": "rating",
+      "route": "habit",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "HAB"
+    },
+    {
+      "id": "C-HAB-02",
+      "section": "C",
+      "text": "I usually choose [CURRENT MODE] for this journey without consciously considering other options.",
+      "type": "rating",
+      "route": "habit",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "HAB"
+    },
+    {
+      "id": "C-HAB-03",
+      "section": "C",
+      "text": "Choosing [CURRENT MODE] for this journey often happens before I notice that I have made a decision.",
+      "type": "rating",
+      "route": "habit",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "HAB"
+    },
+    {
+      "id": "C-HAB-04",
+      "section": "C",
+      "text": "I do not need to consciously remind myself to choose [CURRENT MODE] for this journey.",
+      "type": "rating",
+      "route": "habit",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "HAB"
+    },
+    {
+      "id": "C-INT-01",
+      "section": "C",
+      "text": "I intend to use [MODE] for this regular journey during the next four weeks.",
+      "type": "rating",
+      "route": "alternative",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "INT"
+    },
+    {
+      "id": "C-INT-02",
+      "section": "C",
+      "text": "I plan to use [MODE] for this journey during the next four weeks.",
+      "type": "rating",
+      "route": "alternative",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "INT"
+    },
+    {
+      "id": "C-INT-03",
+      "section": "C",
+      "text": "I expect to use [MODE] for this journey during the next four weeks.",
+      "type": "rating",
+      "route": "alternative",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Strongly disagree",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Disagree",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Agree",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "construct": "INT"
+    },
+    {
+      "id": "C-BEH-01",
+      "section": "C",
+      "text": "During the past four weeks, how often did you make this regular journey using [MODE]?",
+      "type": "single",
+      "route": "alternative",
+      "required": true,
+      "options": [
+        {
+          "code": 0,
+          "label": "Never",
+          "exclusive": false
+        },
+        {
+          "code": 1,
+          "label": "Once",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "2–3 times",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "4–7 times",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "8 or more times",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot recall",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "C-BEH-02",
+      "section": "C",
+      "text": "Suppose you make this regular journey ten times in the next four weeks. How many times do you expect to use [MODE]?",
+      "type": "count",
+      "route": "alternative",
+      "required": true,
+      "options": [
+        {
+          "code": 0,
+          "label": "0",
+          "exclusive": false
+        },
+        {
+          "code": 1,
+          "label": "1",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "2",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "3",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "4",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "5",
+          "exclusive": false
+        },
+        {
+          "code": 6,
+          "label": "6",
+          "exclusive": false
+        },
+        {
+          "code": 7,
+          "label": "7",
+          "exclusive": false
+        },
+        {
+          "code": 8,
+          "label": "8",
+          "exclusive": false
+        },
+        {
+          "code": 9,
+          "label": "9",
+          "exclusive": false
+        },
+        {
+          "code": 10,
+          "label": "10",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Not applicable",
+          "exclusive": false
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "C-CTX-01",
+      "section": "C",
+      "text": "Which factors currently make it difficult to use [MODE] for this regular journey? Select all that apply.",
+      "type": "multi",
+      "route": "alternative",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Travel time",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Financial cost",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Unsafe or inaccessible routes",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Unreliable service or difficult transfers",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Weather or seasonal maintenance",
+          "exclusive": false
+        },
+        {
+          "code": 6,
+          "label": "Several linked stops or caregiving/carrying",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "No such difficulties",
+          "exclusive": true
+        },
+        {
+          "code": 8,
+          "label": "Other",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge",
+          "exclusive": true
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "A-DEC-01",
+      "section": "D",
+      "text": "For a vehicle you use or share, how much say do you have in decisions about when and how it is charged?",
+      "type": "single",
+      "route": "always",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "I mainly decide",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "I share the decision",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Someone else mainly decides",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "No relevant vehicle",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Do not know",
+          "exclusive": true
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "A-TIME-01",
+      "section": "D",
+      "text": "For a vehicle you use or share, how often is it parked in one place for at least two hours during a typical day or night?",
+      "type": "single",
+      "route": "always",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Never",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Rarely",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Sometimes",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "Often",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "Very often",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "No relevant vehicle",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Do not know",
+          "exclusive": true
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "A-PV-01",
+      "section": "D",
+      "text": "Does your household currently have access to rooftop solar electricity?",
+      "type": "single",
+      "route": "always",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Yes",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "No",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Do not know",
+          "exclusive": true
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "A-PARK-CHG",
+      "section": "D",
+      "text": "Do you have access to a designated or reserved parking space at home, and can a vehicle be charged there?",
+      "type": "single",
+      "route": "parking_context",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Yes, with charging available",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Yes, but without charging",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Yes, but I do not know whether charging could be installed or provided",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "No designated or reserved parking space",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Do not know",
+          "exclusive": true
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "A-CHG-ROLE",
+      "section": "D",
+      "text": "Thinking about the battery-electric or plug-in hybrid vehicle you or your household use most regularly, which best describes your role?",
+      "type": "single",
+      "route": "plug_access",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "I usually charge it or help arrange charging",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Someone else usually charges it, but I know where it is charged",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "Someone else usually charges it and I do not know the details",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "I have access but the vehicle is not currently charged",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Not sure",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "A-CHG-LOC",
+      "section": "D",
+      "text": "Where is this battery-electric or plug-in hybrid vehicle typically charged? Select all that apply.",
+      "type": "multi",
+      "route": "charging_details",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "At home — private charging",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "At home — shared residential charging",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "At a workplace or employer-provided parking facility",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "At a public fast-charging station",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "At a public standard (AC) charging station",
+          "exclusive": false
+        },
+        {
+          "code": 6,
+          "label": "At shops or other destinations",
+          "exclusive": false
+        },
+        {
+          "code": 7,
+          "label": "Elsewhere (category only)",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "It has not been charged recently",
+          "exclusive": true
+        },
+        {
+          "code": 98,
+          "label": "Do not know",
+          "exclusive": true
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026"
+    },
+    {
+      "id": "A-CHG-MAIN",
+      "section": "D",
+      "text": "Which ONE of these locations is used most often to charge this vehicle?",
+      "type": "single",
+      "route": "charging_main",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "At home — private charging",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "At home — shared residential charging",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "At a workplace or employer-provided parking facility",
+          "exclusive": false
+        },
+        {
+          "code": 4,
+          "label": "At a public fast-charging station",
+          "exclusive": false
+        },
+        {
+          "code": 5,
+          "label": "At a public standard (AC) charging station",
+          "exclusive": false
+        },
+        {
+          "code": 6,
+          "label": "At shops or other destinations",
+          "exclusive": false
+        },
+        {
+          "code": 7,
+          "label": "Elsewhere (category only)",
+          "exclusive": false
+        },
+        {
+          "code": 96,
+          "label": "They are used equally often",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Do not know",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "option_filter": "charging_locations"
+    },
+    {
+      "id": "A-CHG-OUT",
+      "section": "D",
+      "text": "Do you have access to a designated charging point for this vehicle outside home, such as at work or a regular parking facility?",
+      "type": "single",
+      "route": "charging_out",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Yes",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "No",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "Do not know",
+          "exclusive": true
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "optional_module": true
+    },
+    {
+      "id": "A-CHG-SCHED",
+      "section": "D",
+      "text": "When this vehicle is charged at home, is charging scheduled to take advantage of lower electricity prices?",
+      "type": "single",
+      "route": "charging_home",
+      "required": true,
+      "options": [
+        {
+          "code": 1,
+          "label": "Yes, usually",
+          "exclusive": false
+        },
+        {
+          "code": 2,
+          "label": "Yes, sometimes",
+          "exclusive": false
+        },
+        {
+          "code": 3,
+          "label": "No",
+          "exclusive": false
+        },
+        {
+          "code": 97,
+          "label": "Price-based scheduling is not available for this household arrangement",
+          "exclusive": false
+        },
+        {
+          "code": 98,
+          "label": "I do not know",
+          "exclusive": false
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer",
+          "exclusive": true
+        }
+      ],
+      "source": "Version A working draft 0.2, 2 November 2026",
+      "optional_module": true
+    }
+  ],
+  "groups": [
+    {
+      "id": "C-PCAP",
+      "title": "Using this transport option",
+      "question_ids": [
+        "C-PCAP-01",
+        "C-PCAP-02",
+        "C-PCAP-03"
+      ],
+      "route": "alternative"
+    },
+    {
+      "id": "C-PSYC",
+      "title": "Planning and making the journey",
+      "question_ids": [
+        "C-PSYC-01",
+        "C-PSYC-02",
+        "C-PSYC-03"
+      ],
+      "route": "alternative"
+    },
+    {
+      "id": "C-POPP",
+      "title": "Routes and services for this journey",
+      "question_ids": [
+        "C-POPP-01",
+        "C-POPP-02",
+        "C-POPP-03"
+      ],
+      "route": "alternative"
+    },
+    {
+      "id": "C-SOPP",
+      "title": "People around you",
+      "question_ids": [
+        "C-SOPP-01",
+        "C-SOPP-02",
+        "C-SOPP-03"
+      ],
+      "route": "alternative"
+    },
+    {
+      "id": "C-RMOT",
+      "title": "Your view of this option",
+      "question_ids": [
+        "C-RMOT-01",
+        "C-RMOT-02",
+        "C-RMOT-03"
+      ],
+      "route": "alternative"
+    },
+    {
+      "id": "C-HAB",
+      "title": "Your usual travel choice",
+      "question_ids": [
+        "C-HAB-01",
+        "C-HAB-02",
+        "C-HAB-03",
+        "C-HAB-04"
+      ],
+      "route": "habit"
+    },
+    {
+      "id": "C-INT",
+      "title": "Your plans for the next four weeks",
+      "question_ids": [
+        "C-INT-01",
+        "C-INT-02",
+        "C-INT-03"
+      ],
+      "route": "alternative"
+    }
+  ],
+  "instructions": {
+    "A": {
+      "title": "Everyday travel",
+      "body": "First, please tell us about the transport options you currently use and the types of journeys you make. These questions are about your actual circumstances; there are no right or wrong answers."
+    },
+    "purposes": {
+      "title": "The different journeys you make",
+      "body": "The same person may use different transport modes for commuting, errands and leisure. The next two questions ask about these purposes separately. There is no assumption that everyone works, studies or makes weekly leisure journeys."
+    },
+    "journey": {
+      "title": "One ordinary journey",
+      "body": "For the next questions, think of ONE real journey you make regularly, using the purpose groups above. We will return to this same ordinary journey after the 2030 choice experiment. Do not use the hypothetical 20 km trip as your reference. Prefer a journey you make at least weekly; otherwise choose the most regular journey you have made in the past four weeks."
+    },
+    "B": {
+      "title": "A future trip in 2030",
+      "body": "The next questions concern a hypothetical 20 km one-way weekday trip in 2030. This trip is separate from the ordinary journey you just described."
+    },
+    "scenario": {
+      "title": "Imagine the same 20 km trip",
+      "body": "Imagine one adult making the same 20 km one-way weekday trip in 2030. Each option shows the total amount your household would pay for that trip, total door-to-door time, the chance of arriving within five minutes of the planned time, and walking/wheeling time. Walking/wheeling and waiting are already included in total time. Costs are stated in current-purchasing-power euros.\n\nConsider driving only if you could legally drive, or travelling as a passenger only if an authorised household driver is available. A private or shared EV here is a household arrangement, not a promised autonomous taxi. Consider public transport only where an accessible service is feasible. If no displayed offer suits you, choose “None of these.”"
+    },
+    "C": {
+      "title": "Return to your ordinary journey",
+      "body": "Now return to the ordinary journey you described earlier. The next statements ask about one transport option you might use more often, or continue using, for that ordinary journey—not about the hypothetical 2030 trip."
+    },
+    "D": {
+      "title": "Vehicles, parking and charging",
+      "body": "The next questions are about your current circumstances. You do not need to own a vehicle or charge one yourself. Questions about actual plug-in vehicle charging will appear only when they are relevant to your household and you can describe the arrangements."
+    }
+  },
+  "tasks": [
+    {
+      "id": "T-P",
+      "practice": true,
+      "profiles": [
+        {
+          "id": 1,
+          "label": "Private EV",
+          "attributes": {
+            "cost": 3,
+            "time": 35,
+            "reliability": 98,
+            "walk": 5
+          }
+        },
+        {
+          "id": 2,
+          "label": "Shared EV",
+          "attributes": {
+            "cost": 8,
+            "time": 40,
+            "reliability": 90,
+            "walk": 0
+          }
+        },
+        {
+          "id": 3,
+          "label": "Accessible public transport",
+          "attributes": {
+            "cost": 1,
+            "time": 60,
+            "reliability": 80,
+            "walk": 10
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-01",
+      "practice": false,
+      "profiles": [
+        {
+          "id": 1,
+          "label": "Private EV",
+          "attributes": {
+            "cost": 5,
+            "time": 35,
+            "reliability": 90,
+            "walk": 5
+          }
+        },
+        {
+          "id": 2,
+          "label": "Shared EV",
+          "attributes": {
+            "cost": 8,
+            "time": 30,
+            "reliability": 98,
+            "walk": 5
+          }
+        },
+        {
+          "id": 3,
+          "label": "Accessible public transport",
+          "attributes": {
+            "cost": 3,
+            "time": 45,
+            "reliability": 90,
+            "walk": 10
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-02",
+      "practice": false,
+      "profiles": [
+        {
+          "id": 1,
+          "label": "Private EV",
+          "attributes": {
+            "cost": 8,
+            "time": 25,
+            "reliability": 98,
+            "walk": 0
+          }
+        },
+        {
+          "id": 2,
+          "label": "Shared EV",
+          "attributes": {
+            "cost": 4,
+            "time": 55,
+            "reliability": 80,
+            "walk": 10
+          }
+        },
+        {
+          "id": 3,
+          "label": "Accessible public transport",
+          "attributes": {
+            "cost": 1,
+            "time": 60,
+            "reliability": 98,
+            "walk": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-03",
+      "practice": false,
+      "profiles": [
+        {
+          "id": 1,
+          "label": "Private EV",
+          "attributes": {
+            "cost": 3,
+            "time": 50,
+            "reliability": 80,
+            "walk": 10
+          }
+        },
+        {
+          "id": 2,
+          "label": "Shared EV",
+          "attributes": {
+            "cost": 12,
+            "time": 30,
+            "reliability": 90,
+            "walk": 0
+          }
+        },
+        {
+          "id": 3,
+          "label": "Accessible public transport",
+          "attributes": {
+            "cost": 5,
+            "time": 30,
+            "reliability": 98,
+            "walk": 5
+          }
+        }
+      ]
+    },
+    {
+      "id": "T-04",
+      "practice": false,
+      "profiles": [
+        {
+          "id": 1,
+          "label": "Private EV",
+          "attributes": {
+            "cost": 5,
+            "time": 25,
+            "reliability": 80,
+            "walk": 5
+          }
+        },
+        {
+          "id": 2,
+          "label": "Shared EV",
+          "attributes": {
+            "cost": 8,
+            "time": 40,
+            "reliability": 98,
+            "walk": 0
+          }
+        },
+        {
+          "id": 3,
+          "label": "Accessible public transport",
+          "attributes": {
+            "cost": 3,
+            "time": 45,
+            "reliability": 90,
+            "walk": 10
+          }
+        }
+      ]
+    }
+  ],
+  "programming_notes": [
+    "C-ALT-USED explicitly confirms the non-private-car mode after C-ALT-01=already using; no mode is assigned silently.",
+    "Journey-purpose selection is respondent-chosen in this prototype. Production balancing is not implemented.",
+    "No recurring ordinary journey skips journey-dependent COM-B; it does not remove transport-DCE eligibility.",
+    "Unknown alternative mode skips dependent ratings; current-mode habit can still be shown when the ordinary current mode is known.",
+    "A-PARK-CHG uses existing/future vehicle context as the provisional relevance rule; no home ownership requirement.",
+    "A-CHG-OUT and A-CHG-SCHED are included optional modules from the draft, so their timing can be reviewed.",
+    "PCAP is included only in this private draft walkthrough. Its production ethics/data-protection activation remains a later decision."
+  ]
+}

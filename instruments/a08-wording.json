@@ -1,0 +1,1070 @@
+{
+  "source": "PULSE A0.8 for commenting, 3 November 2026",
+  "source_sha256": "790f8c22f24ed1cc6f05b543cb17e4a192b2e9d419415e14e05317b0220fe649",
+  "wording": {
+    "S-CONSENT-01": "I have read the PULSE participant information and agree to take part in this survey.",
+    "S-AGE-01": "Are you aged 18 years or over?",
+    "S-SITE-01": "Which PULSE study area do you currently live in?",
+    "A-MOB-01": "Which transport options do you use in a usual week? Select all that apply.",
+    "A-MOB-PRIMARY": "Which ONE of these options do you use most often for everyday journeys? Select one.",
+    "A-VEH-01": "On how many days in a usual week do you use a car or light van, either as driver or passenger? Include occasional use.",
+    "R-DRIVE-01": "Do you currently drive a car or light van at least occasionally?",
+    "A-PRO-DRIVE-01": "Do you drive a vehicle as part of paid work? Do not count travelling between home and your usual workplace.",
+    "A-PRO-PT-01": "Which powertrains do the vehicles you drive as part of paid work have? Select all that apply.",
+    "A-PRO-TYPE-01": "What kind of professional driving do you do?",
+    "A-VEH-ACCESS-01": "Do you or your household have regular access to a car or light van for personal or household use? Include a shared, leased or employer-provided vehicle available outside work.",
+    "A-HH-PT-01": "Which types of car or light van do you or your household have regular access to? Select all that apply.",
+    "A-OPP-01": "Which parking or charging arrangements are realistically available for a vehicle you use or share? Select all that apply.",
+    "A-AFF-01": "How much do the costs of your usual transport restrict which options you can use?",
+    "A-FUT-ROLE": "Within the next five years, could you realistically use, share, or help decide about a car or its charging services for yourself or your household?",
+    "A-HH-DEC-01": "How are decisions about the following purchases usually made in your household?",
+    "A-PUR-01": "How often do you usually leave home for each of the following purposes? Count days, rather than the number of separate journeys.",
+    "A-PUR-02": "Which ONE transport mode do you most commonly use for journeys of each purpose?",
+    "A-JRN-01": "Which of the following best describes your selected regular journey?",
+    "A-JRN-02": "Which transport option do you normally use for the longest part of this journey?",
+    "A-JRN-03": "About how far is this journey in one direction?",
+    "A-JRN-04": "Do you normally combine this journey with other stops or responsibilities (for example, collecting someone, shopping or carrying equipment)?",
+    "A-JRN-05": "About how often do you make this journey?",
+    "B-TRIP-CONTEXT": "For a hypothetical 20 km one-way weekday trip in 2030, which purpose could you imagine?",
+    "B-MODE-EVAL": "For this hypothetical 20 km trip in 2030, which options could you realistically consider if offered? Select all that apply.",
+    "C-ALT-01": "For this journey, which non-private-car option would you most realistically use more often, or continue using?",
+    "C-ALT-USED": "Which option do you already use and prefer for this journey?",
+    "C-ALT-02": "If particular transport conditions improved, which option would be most plausible for this journey?",
+    "C-COND-01": "What would need to improve for [MODE] to be practical for this journey? Select the changes you need.",
+    "C-PCAP-01": "My physical abilities would allow me to make this journey using [MODE].",
+    "C-PCAP-02": "I could manage the physical activities required to use [MODE] for this journey.",
+    "C-PCAP-03": "I could regularly make this journey using [MODE] without the physical demands being too difficult for me.",
+    "C-PSYC-01": "I know how to plan this journey using [MODE].",
+    "C-PSYC-02": "I know how to use the travel information, services or equipment needed for this journey using [MODE].",
+    "C-PSYC-03": "I know how to adjust my travel plans if something unexpected disrupts this journey using [MODE].",
+    "C-POPP-01": "A realistic route or service for making this journey using [MODE] is available where I live.",
+    "C-POPP-02": "The routes or services required to use [MODE] are available at the times I normally need to travel.",
+    "C-POPP-03": "My current transport environment gives me a practical opportunity to make this journey using [MODE].",
+    "C-SOPP-01": "People important to me would support my using [MODE] for this journey.",
+    "C-SOPP-02": "People whose opinions I value would approve of my using [MODE] for this journey.",
+    "C-SOPP-03": "People close to me would encourage me to use [MODE] for journeys like this.",
+    "C-RMOT-01": "Using [MODE] for this journey would be a good choice for me.",
+    "C-RMOT-02": "The advantages of using [MODE] for this journey would outweigh the disadvantages.",
+    "C-RMOT-03": "Using [MODE] for this journey would fit the way I want to travel in the future.",
+    "C-HAB-01": "When making this journey, I tend to choose [CURRENT MODE] automatically.",
+    "C-HAB-02": "I usually choose [CURRENT MODE] for this journey without consciously considering other options.",
+    "C-HAB-03": "Choosing [CURRENT MODE] for this journey often happens before I notice that I have made a decision.",
+    "C-HAB-04": "I do not need to consciously remind myself to choose [CURRENT MODE] for this journey.",
+    "C-CONV-01": "For this journey, [CURRENT MODE] is the easiest option to fit into my day.",
+    "C-PLAN-EFFORT-01": "For this journey, I prefer an option that requires little day-to-day planning.",
+    "C-INT-01": "[Conditional route only: With those changes,] I intend to use [MODE] for this journey during the next four weeks.",
+    "C-INT-02": "[Conditional route only: With those changes,] I plan to use [MODE] for this journey during the next four weeks.",
+    "C-INT-03": "[Conditional route only: With those changes,] I expect to use [MODE] for this journey during the next four weeks.",
+    "C-BEH-01": "During the past four weeks, how often did you make this regular journey using [MODE]?",
+    "C-BEH-02": "[Conditional route only: With those changes,] suppose you made this journey ten times during the next four weeks. How many times would you expect to use [MODE]?",
+    "C-CTX-01": "Which factors currently make it difficult to use [MODE] for this regular journey? Select all that apply.",
+    "C-NOALT-BAR-01": "What would need to change for a non-private-car option to become practical for this journey? Select all that apply.",
+    "A-DEC-01": "For a vehicle you use or share, how much say do you have in decisions about when and how it is charged?",
+    "A-TIME-01": "For a vehicle you use or share, how often is it parked in one place for at least two hours during a typical day or night?",
+    "A-PV-01": "Does your household currently have access to rooftop solar electricity?",
+    "A-PARK-CHG": "Do you have access to a designated or reserved parking space at home, and can a vehicle be charged there?",
+    "A-CHG-ROLE": "Thinking about the battery-electric or plug-in hybrid vehicle you or your household use most regularly, which best describes your role?",
+    "A-CHG-LOC": "Where is this battery-electric or plug-in hybrid vehicle typically charged? Select all that apply.",
+    "A-CHG-MAIN": "Which ONE of these locations is used most often to charge this vehicle?",
+    "A-CHG-OUT": "Do you have access to a designated charging point for this vehicle outside home, such as at work or a regular parking facility?",
+    "A-CHG-SCHED": "When this vehicle is charged at home, is charging scheduled to take advantage of lower electricity prices?",
+    "A-CHG-PACE-01": "Which best describes how this vehicle is usually charged?",
+    "D-CARD-PULSE": "PULSE is researching ways to charge electric vehicles and, under agreed conditions, exchange energy with the electricity system. Stationary wireless charging, vehicle-to-grid (V2G) and automated vehicle positioning are separate capabilities. Availability, compatibility, performance and benefits are not guaranteed by this research survey.",
+    "D-CARD-W": "Stationary wireless charging transfers electricity to a compatible EV while it is parked above compatible equipment. The driver or an authorised positioning system must place the vehicle correctly. It is not charging while driving. Charging speed, compatibility and reliability depend on the installation and operating conditions.",
+    "D-CARD-V": "V2G lets a compatible EV battery send electricity to the grid through suitable bidirectional equipment. It may help balance electricity demand and supply, depending on how the service operates. Participation depends on an agreement about battery reserve, ready time, control, data and payment. Payments or environmental benefits are not guaranteed. V2G is different from V2H, which supplies a home rather than the grid.",
+    "F-EVAL-W": "Even if you do not currently have an electric vehicle, can you meaningfully consider the hypothetical choices about stationary wireless charging for yourself or your household?",
+    "F-EVAL-V": "Even if you do not currently have an electric vehicle, can you meaningfully consider the hypothetical choices about a household V2G contract for yourself or your household?",
+    "D-WPT-CHECK-01": "What is needed for stationary wireless charging?",
+    "D-WPT-CHECK-02": "What does stationary wireless charging mean?",
+    "D-V2G-CHECK-01": "In which direction can energy flow during V2G?",
+    "D-V2G-CHECK-02": "What determines whether the battery may export energy?",
+    "D-CARD-P": "Automated positioning moves a compatible vehicle into a specified parked position under authorised supervision and stop controls. It is separate from charging and does not authorise electricity export or imply driverless road travel.",
+    "A-EXP-P": "Before this survey, what was your direct experience with automatic parking or vehicle positioning?",
+    "D-PARK-CHECK-01": "What is the purpose of automated positioning?",
+    "D-PARK-CHECK-02": "Does automated positioning itself authorise V2G export?",
+    "E-W-USE-01": "Wireless charging would make charging more convenient for my household.",
+    "E-W-USE-02": "Wireless charging would help my household keep its vehicle ready for travel.",
+    "E-W-USE-03": "Overall, wireless charging would be useful for my household.",
+    "E-W-EASE-01": "Learning to use wireless charging would be easy.",
+    "E-W-EASE-02": "The steps for starting wireless charging would be clear.",
+    "E-W-EASE-03": "Operating wireless charging would be straightforward.",
+    "E-W-ATT-01": "For my household, wireless charging would be a good idea.",
+    "E-W-ATT-02": "I would view wireless charging positively.",
+    "E-W-ATT-03": "I would find wireless charging appealing.",
+    "E-W-BI-01": "If a suitable service were available and I had a say in the decision, I would intend to choose wireless charging for my household.",
+    "E-W-BI-02": "If a suitable service were available and I had a say in the decision, I would be likely to choose wireless charging for my household.",
+    "E-W-BI-03": "If a suitable service were available and I had a say in the decision, I would plan to choose wireless charging for my household.",
+    "E-P-BEN-01": "In a suitable parking area, automated positioning could make reaching the correct wireless charging position easier for me or my household.",
+    "E-P-CTRL-01": "I would feel able to stop automated positioning if I needed to.",
+    "E-P-BI-01": "I would be willing to try automated positioning for stationary wireless charging if the conditions suited me or my household.",
+    "E-V-USE-01": "V2G would make my household’s EV useful for more than travel.",
+    "E-V-USE-02": "V2G would help my household benefit from stored electricity.",
+    "E-V-USE-03": "Overall, V2G would be useful for my household.",
+    "E-V-EASE-01": "Learning to take part in V2G would be easy.",
+    "E-V-EASE-02": "Setting my household’s V2G preferences would be easy.",
+    "E-V-EASE-03": "Taking part in V2G from day to day would be straightforward.",
+    "E-V-ATT-01": "For my household, V2G would be a good idea.",
+    "E-V-ATT-02": "I would view V2G positively.",
+    "E-V-ATT-03": "I would find V2G appealing.",
+    "E-V-BI-01": "If a suitable service were available and I had a say in the decision, I would intend to choose V2G participation for my household.",
+    "E-V-BI-02": "If a suitable service were available and I had a say in the decision, I would be likely to choose V2G participation for my household.",
+    "E-V-BI-03": "If a suitable service were available and I had a say in the decision, I would plan to choose V2G participation for my household.",
+    "E-V-PBC-01": "My household could decide when V2G energy export is allowed.",
+    "E-V-PBC-02": "My household could change its V2G participation settings.",
+    "E-V-PBC-03": "My household could stop V2G export when necessary.",
+    "E-V-MOBR-01": "I would worry about insufficient charge for an unexpected trip.",
+    "E-V-MOBR-02": "I would worry that V2G could restrict my household’s travel.",
+    "E-V-MOBR-03": "I would worry about having enough charge when the vehicle is needed.",
+    "E-V-BATR-01": "I would worry that V2G could increase battery wear.",
+    "E-V-BATR-02": "I would worry that V2G could shorten battery life.",
+    "E-V-BATR-03": "I would worry about battery-replacement costs caused by V2G.",
+    "F-X-TRUST-01": "I would trust [OPERATOR] to keep its commitments to service users.",
+    "F-X-TRUST-02": "I would trust [OPERATOR] to give truthful information about the service.",
+    "F-X-TRUST-03": "I would trust [OPERATOR] to respect users' agreed permissions.",
+    "F-X-RELIAB-01": "I would expect [TECH] to work when I needed the service.",
+    "F-X-RECOVER-01": "If a problem occurred, I would expect clear steps for restoring normal use or getting help.",
+    "F-X-CLEAR-01": "From the description, it is clear to me what I would be authorising when using [TECH].",
+    "F-X-FIT-01": "The described [TECH] arrangement would fit my household's usual vehicle-use routine.",
+    "F-X-SOC-01": "People whose views matter to me in household vehicle or charging decisions would support using [TECH].",
+    "F-X-ACCESS-BAR": "Which, if any, of the described service tasks might be difficult for you, using your usual aids or support? Select all that apply.",
+    "G-EMF-01": "I would want clear information about electromagnetic-field exposure before deciding about wireless charging.",
+    "G-W-EMF-CONC-01": "I would be concerned about electromagnetic-field exposure when using stationary wireless charging.",
+    "G-DATA-CONC-01": "I would be concerned about unauthorised access to vehicle or charging information in the described [TECH] service.",
+    "G-DATA-USE-01": "I would be concerned about the described [TECH] service using my information for purposes I had not agreed to.",
+    "G-ACCESS-01": "A charging service should be usable by people with different mobility or accessibility needs.",
+    "G-WPT-CONTEXT-01": "Can you imagine evaluating charging during a planned two-hour parking stay like this, even if it is not your usual charging pattern?",
+    "G-INFO-W": "Possible value depends on your situation and the installation. Consider these possibilities:",
+    "G-INFO-V": "Possible value depends on your situation, the contract and how the service operates. Consider these possibilities:",
+    "G-W-BI-POST-01": "If a suitable service were available and I had a say in the decision, I would intend to choose wireless charging for my household.",
+    "G-W-BI-POST-02": "If a suitable service were available and I had a say in the decision, I would be likely to choose wireless charging for my household.",
+    "G-W-BI-POST-03": "If a suitable service were available and I had a say in the decision, I would plan to choose wireless charging for my household.",
+    "G-V-BI-POST-01": "If a suitable service were available and I had a say in the decision, I would intend to choose V2G participation for my household.",
+    "G-V-BI-POST-02": "If a suitable service were available and I had a say in the decision, I would be likely to choose V2G participation for my household.",
+    "G-V-BI-POST-03": "If a suitable service were available and I had a say in the decision, I would plan to choose V2G participation for my household.",
+    "G-PUB-SUPPORT-POST-01": "Based on the description, I would support making [TECH] available in my local area.",
+    "G-PUB-ATT-POST-01": "Based on the description, I would view making [TECH] available in my local area positively.",
+    "G-BEN-IMP-01": "How important would each potential benefit be [private: for you or your household / public: when considering this service in your local area]?",
+    "G-BEN-RANK-01": "Which potential benefits matter most to you? Choose up to three and put them in order, with 1 as the most important.",
+    "G-REF-CON-01": "Which concerns about [TECH], if any, mattered most to you? Select up to three.",
+    "G-REF-MIN-01": "Which conditions would be most important before you would consider the described [TECH] service? Select up to three.",
+    "G-V-PROS-01": "The V2G offers would provide worthwhile financial value for my household.",
+    "G-V-PROS-02": "Taking part in the described V2G arrangement would be a meaningful way for my household to contribute to the electricity system.",
+    "G-V-PROS-03": "Taking part in V2G would fit the active role I would like my household to have in managing its stored energy.",
+    "G-PUB-FAIR-01": "Based on the information provided, I think the benefits and costs of introducing [TECH] in my area would be shared fairly.",
+    "G-PUB-NONUSER-01": "Introducing [TECH] in my area could create difficulties for people who do not use the service.",
+    "G-PUB-VOICE-01": "What would you want before decisions are made about introducing [TECH] in your area? Select all that apply.",
+    "AE1r1": "Social power: control over other people.",
+    "AE1r2": "Wealth: material possessions and money.",
+    "AE1r3": "Social justice: correcting injustice and caring for the disadvantaged.",
+    "AE1r4": "Respect for the Earth: living in harmony with other species.",
+    "AE1r5": "Authority: the right to lead and command.",
+    "AE1r6": "Environmental protection: preserving the current state of the environment.",
+    "AE1r7": "Ambition: a strong need to succeed.",
+    "AE1r8": "Pollution prevention: protecting natural resources.",
+    "AE1r9": "Helpfulness: working for the well-being of others.",
+    "AE1r10": "World peace: no wars or conflicts.",
+    "AE1r11": "Influence: influencing people and events.",
+    "AE1r12": "Equality: equal opportunities for all.",
+    "AE1r13": "Connection with nature: a strong connection to nature.",
+    "H-AGE-01": "Which age group are you in?",
+    "H-GEN-01": "How do you describe your gender?",
+    "H-LOC-01": "Which describes the area where you live?",
+    "H-EDU-01": "What is the highest level of education you have completed?",
+    "H-OCC-01": "Which of the following best describes your current main occupational situation?",
+    "H-HH-TYPE-01": "Which of the following best describes the household you live in?",
+    "H-HH-SIZE-01": "How many people usually live in your household, including yourself?",
+    "H-CHILD-01": "How many children under the age of 18 usually live in your household?",
+    "H-FIN-01": "Thinking about your household’s total income, how easy or difficult is it to make ends meet?"
+  },
+  "tables": [
+    {
+      "index": 0,
+      "rows": [
+        [
+          "Attribute",
+          "Private EV levels",
+          "Shared EV levels",
+          "Accessible public transport"
+        ],
+        [
+          "Trip cost / one-way trip",
+          "€3 / €5 / €8",
+          "€4 / €8 / €12",
+          "€1 / €3 / €5"
+        ],
+        [
+          "Door-to-door time",
+          "25 / 35 / 50 min",
+          "30 / 40 / 55 min",
+          "30 / 45 / 60 min"
+        ],
+        [
+          "On-time arrivals / 100",
+          "80 / 90 / 98",
+          "80 / 90 / 98",
+          "80 / 90 / 98"
+        ],
+        [
+          "Walking/wheeling within time",
+          "0 / 5 / 10 min",
+          "0 / 5 / 10 min",
+          "0 / 5 / 10 min"
+        ]
+      ]
+    },
+    {
+      "index": 1,
+      "rows": [
+        [
+          "Attribute",
+          "Private EV",
+          "Shared EV",
+          "Accessible public transport"
+        ],
+        [
+          "Trip cost (EUR)",
+          "€3",
+          "€8",
+          "€1"
+        ],
+        [
+          "Door-to-door time (min)",
+          "35",
+          "40",
+          "60"
+        ],
+        [
+          "On time / 100 trips",
+          "98",
+          "90",
+          "80"
+        ],
+        [
+          "Walking/wheeling (min)",
+          "5",
+          "0",
+          "10"
+        ]
+      ]
+    },
+    {
+      "index": 2,
+      "rows": [
+        [
+          "Attribute",
+          "Private EV",
+          "Shared EV",
+          "Accessible public transport"
+        ],
+        [
+          "Trip cost (EUR)",
+          "€5",
+          "€8",
+          "€3"
+        ],
+        [
+          "Door-to-door time (min)",
+          "35",
+          "30",
+          "45"
+        ],
+        [
+          "On time / 100 trips",
+          "90",
+          "98",
+          "90"
+        ],
+        [
+          "Walking/wheeling (min)",
+          "5",
+          "5",
+          "10"
+        ]
+      ]
+    },
+    {
+      "index": 3,
+      "rows": [
+        [
+          "Attribute",
+          "Private EV",
+          "Shared EV",
+          "Accessible public transport"
+        ],
+        [
+          "Trip cost (EUR)",
+          "€8",
+          "€4",
+          "€1"
+        ],
+        [
+          "Door-to-door time (min)",
+          "25",
+          "55",
+          "60"
+        ],
+        [
+          "On time / 100 trips",
+          "98",
+          "80",
+          "98"
+        ],
+        [
+          "Walking/wheeling (min)",
+          "0",
+          "10",
+          "0"
+        ]
+      ]
+    },
+    {
+      "index": 4,
+      "rows": [
+        [
+          "Attribute",
+          "Private EV",
+          "Shared EV",
+          "Accessible public transport"
+        ],
+        [
+          "Trip cost (EUR)",
+          "€3",
+          "€12",
+          "€5"
+        ],
+        [
+          "Door-to-door time (min)",
+          "50",
+          "30",
+          "30"
+        ],
+        [
+          "On time / 100 trips",
+          "80",
+          "90",
+          "98"
+        ],
+        [
+          "Walking/wheeling (min)",
+          "10",
+          "0",
+          "5"
+        ]
+      ]
+    },
+    {
+      "index": 5,
+      "rows": [
+        [
+          "Attribute",
+          "Private EV",
+          "Shared EV",
+          "Accessible public transport"
+        ],
+        [
+          "Trip cost (EUR)",
+          "€5",
+          "€8",
+          "€3"
+        ],
+        [
+          "Door-to-door time (min)",
+          "25",
+          "40",
+          "45"
+        ],
+        [
+          "On time / 100 trips",
+          "80",
+          "98",
+          "90"
+        ],
+        [
+          "Walking/wheeling (min)",
+          "5",
+          "0",
+          "10"
+        ]
+      ]
+    },
+    {
+      "index": 6,
+      "rows": [
+        [
+          "Attribute",
+          "WPT A/B candidate levels",
+          "Cable reference"
+        ],
+        [
+          "Price per 20 kWh (EUR)",
+          "6 / 8 / 10 / 12 / 16",
+          "10"
+        ],
+        [
+          "Extra round-trip driving time (min)",
+          "0 / 5 / 10",
+          "0"
+        ],
+        [
+          "Sessions finished without restart (out of 100)",
+          "90 / 95 / 99",
+          "95"
+        ],
+        [
+          "Renewable purchased-supply share (annual %)",
+          "40 / 70 / 100",
+          "40"
+        ],
+        [
+          "Positioning",
+          "Driver with guidance / authorised automatic",
+          "Driver positions/connects"
+        ]
+      ]
+    },
+    {
+      "index": 7,
+      "rows": [
+        [
+          "Feature",
+          "Wireless A",
+          "Wireless B",
+          "Cable charging"
+        ],
+        [
+          "Total price per 20 kWh EUR",
+          "€10",
+          "€12",
+          "€10"
+        ],
+        [
+          "Extra round-trip driving min",
+          "5",
+          "0",
+          "0"
+        ],
+        [
+          "No-restart sessions per 100",
+          "95",
+          "99",
+          "95"
+        ],
+        [
+          "Annual renewable supply share %",
+          "70",
+          "40",
+          "40"
+        ],
+        [
+          "Positioning",
+          "Driver with guidance",
+          "Automatic positioning",
+          "Driver positions and connects"
+        ]
+      ]
+    },
+    {
+      "index": 8,
+      "rows": [
+        [
+          "Feature",
+          "Wireless A",
+          "Wireless B",
+          "Cable charging"
+        ],
+        [
+          "Total price per 20 kWh EUR",
+          "€12",
+          "€8",
+          "€10"
+        ],
+        [
+          "Extra round-trip driving min",
+          "5",
+          "0",
+          "0"
+        ],
+        [
+          "No-restart sessions per 100",
+          "99",
+          "90",
+          "95"
+        ],
+        [
+          "Annual renewable supply share %",
+          "70",
+          "100",
+          "40"
+        ],
+        [
+          "Positioning",
+          "Driver with guidance",
+          "Automatic positioning",
+          "Driver positions and connects"
+        ]
+      ]
+    },
+    {
+      "index": 9,
+      "rows": [
+        [
+          "Feature",
+          "Wireless A",
+          "Wireless B",
+          "Cable charging"
+        ],
+        [
+          "Total price per 20 kWh EUR",
+          "€6",
+          "€16",
+          "€10"
+        ],
+        [
+          "Extra round-trip driving min",
+          "10",
+          "0",
+          "0"
+        ],
+        [
+          "No-restart sessions per 100",
+          "95",
+          "99",
+          "95"
+        ],
+        [
+          "Annual renewable supply share %",
+          "70",
+          "100",
+          "40"
+        ],
+        [
+          "Positioning",
+          "Driver with guidance",
+          "Automatic positioning",
+          "Driver positions and connects"
+        ]
+      ]
+    },
+    {
+      "index": 10,
+      "rows": [
+        [
+          "Feature",
+          "Wireless A",
+          "Wireless B",
+          "Cable charging"
+        ],
+        [
+          "Total price per 20 kWh EUR",
+          "€10",
+          "€8",
+          "€10"
+        ],
+        [
+          "Extra round-trip driving min",
+          "0",
+          "10",
+          "0"
+        ],
+        [
+          "No-restart sessions per 100",
+          "90",
+          "95",
+          "95"
+        ],
+        [
+          "Annual renewable supply share %",
+          "100",
+          "40",
+          "40"
+        ],
+        [
+          "Positioning",
+          "Automatic positioning",
+          "Driver with guidance",
+          "Driver positions and connects"
+        ]
+      ]
+    },
+    {
+      "index": 11,
+      "rows": [
+        [
+          "Feature",
+          "Wireless A",
+          "Wireless B",
+          "Cable charging"
+        ],
+        [
+          "Total price per 20 kWh EUR",
+          "€16",
+          "€12",
+          "€10"
+        ],
+        [
+          "Extra round-trip driving min",
+          "0",
+          "5",
+          "0"
+        ],
+        [
+          "No-restart sessions per 100",
+          "99",
+          "95",
+          "95"
+        ],
+        [
+          "Annual renewable supply share %",
+          "70",
+          "100",
+          "40"
+        ],
+        [
+          "Positioning",
+          "Driver with guidance",
+          "Automatic positioning",
+          "Driver positions and connects"
+        ]
+      ]
+    },
+    {
+      "index": 12,
+      "rows": [
+        [
+          "Feature",
+          "Wireless A",
+          "Wireless B",
+          "Cable charging"
+        ],
+        [
+          "Total price per 20 kWh EUR",
+          "€6",
+          "€10",
+          "€10"
+        ],
+        [
+          "Extra round-trip driving min",
+          "5",
+          "10",
+          "0"
+        ],
+        [
+          "No-restart sessions per 100",
+          "90",
+          "99",
+          "95"
+        ],
+        [
+          "Annual renewable supply share %",
+          "40",
+          "70",
+          "40"
+        ],
+        [
+          "Positioning",
+          "Automatic positioning",
+          "Driver with guidance",
+          "Driver positions and connects"
+        ]
+      ]
+    },
+    {
+      "index": 13,
+      "rows": [
+        [
+          "Feature",
+          "Wireless A",
+          "Wireless B",
+          "Cable charging"
+        ],
+        [
+          "Total price per 20 kWh EUR",
+          "€8",
+          "€12",
+          "€10"
+        ],
+        [
+          "Extra round-trip driving min",
+          "10",
+          "0",
+          "0"
+        ],
+        [
+          "No-restart sessions per 100",
+          "95",
+          "99",
+          "95"
+        ],
+        [
+          "Annual renewable supply share %",
+          "100",
+          "40",
+          "40"
+        ],
+        [
+          "Positioning",
+          "Automatic positioning",
+          "Driver with guidance",
+          "Driver positions and connects"
+        ]
+      ]
+    },
+    {
+      "index": 14,
+      "rows": [
+        [
+          "Attribute",
+          "V2G A/B candidate levels",
+          "No-V2G reference"
+        ],
+        [
+          "Provider pays household: maximum EUR/month",
+          "0 / 20 / 60",
+          "0"
+        ],
+        [
+          "Minimum reserve of a 60 kWh battery",
+          "30% / 50% / 70% (approx. 90 / 150 / 210 km)",
+          "No export"
+        ],
+        [
+          "Max export weekdays/week",
+          "1 / 3 / 5",
+          "0"
+        ],
+        [
+          "Authorisation / notice",
+          "Approve each / Automatic + notice / Automatic + dashboard record",
+          "No export"
+        ],
+        [
+          "Annual renewable purchased-supply share %",
+          "40 / 70 / 100",
+          "40"
+        ]
+      ]
+    },
+    {
+      "index": 15,
+      "rows": [
+        [
+          "Feature",
+          "V2G A",
+          "V2G B",
+          "No V2G"
+        ],
+        [
+          "Provider pays household: maximum EUR/month",
+          "€20",
+          "€60",
+          "€0"
+        ],
+        [
+          "Minimum reserve %; range illustrative",
+          "50% (about 150 km)",
+          "30% (about 90 km)",
+          "No export"
+        ],
+        [
+          "Max export weekdays/week",
+          "3",
+          "1",
+          "0"
+        ],
+        [
+          "Authorisation and notice",
+          "Approve each event",
+          "Automatic with notice",
+          "No export"
+        ],
+        [
+          "Renewable supply share %",
+          "70",
+          "100",
+          "40"
+        ]
+      ]
+    },
+    {
+      "index": 16,
+      "rows": [
+        [
+          "Feature",
+          "V2G A",
+          "V2G B",
+          "No V2G"
+        ],
+        [
+          "Provider pays household: maximum EUR/month",
+          "€60",
+          "€20",
+          "€0"
+        ],
+        [
+          "Minimum reserve %; range illustrative",
+          "30% (about 90 km)",
+          "70% (about 210 km)",
+          "No export"
+        ],
+        [
+          "Max export weekdays/week",
+          "5",
+          "1",
+          "0"
+        ],
+        [
+          "Authorisation and notice",
+          "Automatic with notice",
+          "Approve each event",
+          "No export"
+        ],
+        [
+          "Renewable supply share %",
+          "70",
+          "100",
+          "40"
+        ]
+      ]
+    },
+    {
+      "index": 17,
+      "rows": [
+        [
+          "Feature",
+          "V2G A",
+          "V2G B",
+          "No V2G"
+        ],
+        [
+          "Provider pays household: maximum EUR/month",
+          "€60",
+          "€0",
+          "€0"
+        ],
+        [
+          "Minimum reserve %; range illustrative",
+          "70% (about 210 km)",
+          "50% (about 150 km)",
+          "No export"
+        ],
+        [
+          "Max export weekdays/week",
+          "3",
+          "1",
+          "0"
+        ],
+        [
+          "Authorisation and notice",
+          "Approve each event",
+          "Automatic with dashboard record",
+          "No export"
+        ],
+        [
+          "Renewable supply share %",
+          "100",
+          "70",
+          "40"
+        ]
+      ]
+    },
+    {
+      "index": 18,
+      "rows": [
+        [
+          "Feature",
+          "V2G A",
+          "V2G B",
+          "No V2G"
+        ],
+        [
+          "Provider pays household: maximum EUR/month",
+          "€20",
+          "€60",
+          "€0"
+        ],
+        [
+          "Minimum reserve %; range illustrative",
+          "30% (about 90 km)",
+          "50% (about 150 km)",
+          "No export"
+        ],
+        [
+          "Max export weekdays/week",
+          "5",
+          "3",
+          "0"
+        ],
+        [
+          "Authorisation and notice",
+          "Approve each event",
+          "Automatic with dashboard record",
+          "No export"
+        ],
+        [
+          "Renewable supply share %",
+          "40",
+          "100",
+          "40"
+        ]
+      ]
+    },
+    {
+      "index": 19,
+      "rows": [
+        [
+          "Feature",
+          "V2G A",
+          "V2G B",
+          "No V2G"
+        ],
+        [
+          "Provider pays household: maximum EUR/month",
+          "€0",
+          "€20",
+          "€0"
+        ],
+        [
+          "Minimum reserve %; range illustrative",
+          "70% (about 210 km)",
+          "30% (about 90 km)",
+          "No export"
+        ],
+        [
+          "Max export weekdays/week",
+          "1",
+          "5",
+          "0"
+        ],
+        [
+          "Authorisation and notice",
+          "Automatic with notice",
+          "Approve each event",
+          "No export"
+        ],
+        [
+          "Renewable supply share %",
+          "100",
+          "70",
+          "40"
+        ]
+      ]
+    },
+    {
+      "index": 20,
+      "rows": [
+        [
+          "Feature",
+          "V2G A",
+          "V2G B",
+          "No V2G"
+        ],
+        [
+          "Provider pays household: maximum EUR/month",
+          "€60",
+          "€20",
+          "€0"
+        ],
+        [
+          "Minimum reserve %; range illustrative",
+          "50% (about 150 km)",
+          "70% (about 210 km)",
+          "No export"
+        ],
+        [
+          "Max export weekdays/week",
+          "5",
+          "1",
+          "0"
+        ],
+        [
+          "Authorisation and notice",
+          "Automatic with dashboard record",
+          "Automatic with notice",
+          "No export"
+        ],
+        [
+          "Renewable supply share %",
+          "40",
+          "100",
+          "40"
+        ]
+      ]
+    },
+    {
+      "index": 21,
+      "rows": [
+        [
+          "Feature",
+          "V2G A",
+          "V2G B",
+          "No V2G"
+        ],
+        [
+          "Provider pays household: maximum EUR/month",
+          "€0",
+          "€20",
+          "€0"
+        ],
+        [
+          "Minimum reserve %; range illustrative",
+          "70% (about 210 km)",
+          "50% (about 150 km)",
+          "No export"
+        ],
+        [
+          "Max export weekdays/week",
+          "3",
+          "5",
+          "0"
+        ],
+        [
+          "Authorisation and notice",
+          "Approve each event",
+          "Automatic with notice",
+          "No export"
+        ],
+        [
+          "Renewable supply share %",
+          "70",
+          "40",
+          "40"
+        ]
+      ]
+    },
+    {
+      "index": 22,
+      "rows": [
+        [
+          "WPT ID",
+          "Short label",
+          "V2G ID",
+          "Short label"
+        ],
+        [
+          "WB1",
+          "Less cable handling",
+          "VB1",
+          "Availability income"
+        ],
+        [
+          "WB2",
+          "Charging during routine parking",
+          "VB2",
+          "Helping balance the electricity system"
+        ],
+        [
+          "WB3",
+          "Help reaching the charging position",
+          "VB3",
+          "Supporting variable renewable electricity"
+        ],
+        [
+          "WB4",
+          "More independent access for some users",
+          "VB4",
+          "An active role in managing stored energy"
+        ]
+      ]
+    }
+  ]
+}
