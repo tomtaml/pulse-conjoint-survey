@@ -49,7 +49,13 @@ export function installationPlan(options){
   content[MAIN]=Buffer.from(`// PULSE v2 adapter. The original Worker module remains unchanged.\nimport legacy from ${JSON.stringify(importMain)};\nimport instrument from '../public/v2/survey.json' with {type:'json'};\nimport {createV2Handler} from './v2-handler.mjs';\nconst handleV2=createV2Handler(instrument);\nexport default {...legacy,async fetch(request,env,ctx){const response=await handleV2(request,env,ctx);return response||legacy.fetch.call(legacy,request,env,ctx);}};\n`);
   const config=structuredClone(project.config);config.main=MAIN;config.vars={...config.vars,SURVEY_V2_COLLECTION_ENABLED:String(options.collect)};
   const first=config.assets.run_worker_first;
-  if(first!==true)config.assets.run_worker_first=Array.isArray(first)?[...new Set([...first,'/api/v2/*'])]:['/api/v2/*'];
+  if(first!==true){
+    const routes=Array.isArray(first)?first:[],v2='/api/v2/*';
+    // Reuse an existing prefix rule such as /api/* rather than adding a
+    // redundant child rule. Also repair configurations from an earlier attempt.
+    const covered=routes.some(route=>!route.startsWith('!')&&route!==v2&&route.endsWith('*')&&!route.slice(0,-1).includes('*')&&v2.startsWith(route.slice(0,-1)));
+    config.assets.run_worker_first=covered?routes.filter(route=>route!==v2):[...new Set([...routes,v2])];
+  }
   const configRelative=path.relative(project.root,project.configPath);content[configRelative]=Buffer.from(JSON.stringify(config,null,2)+'\n');
   for(const relative of Object.keys(content)){
     const target=path.join(project.root,relative);if(!target.startsWith(project.root+path.sep))throw new Error('Unsafe target path.');
