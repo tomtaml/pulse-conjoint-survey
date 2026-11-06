@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PULSE v2 questionnaire test for mobility, charging services and stated choices.">
+  <meta name="theme-color" content="#f4f6f2">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://challenges.cloudflare.com; style-src 'self'; img-src 'self' data:; connect-src 'self' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; base-uri 'self'; form-action 'self'">
+  <title>PULSE · Survey v2 test</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to question</a>
+  <header class="header">
+    <div class="brand"><span class="brand-icon" aria-hidden="true">P</span><div>PULSE<small>Citizen survey v2</small></div></div>
+    <div class="header-right"><span class="draft-badge">Questionnaire test</span><button id="comment-button" class="quiet" hidden>Comment on this screen</button></div>
+  </header>
+  <div class="test-strip" id="collection-status" role="status">Checking test collection…</div>
+  <div id="progress-area"></div>
+  <main id="main" tabindex="-1"><p class="loading" role="status">Loading the survey…</p></main>
+  <aside id="comment-panel" class="comment-panel" aria-label="Comment on this screen" hidden></aside>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <footer><span>PULSE WP1 · English test</span><span>v2 · compact presentation · 6 November 2026</span><a href="../v1/">Earlier v1</a></footer>
+</body>
+</html>

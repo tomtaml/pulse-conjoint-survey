@@ -1,0 +1,99 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1100" height="900" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1100 900" version="1.0" fill-rule="evenodd">
+	<ns0:title>Routing Charging</ns0:title><ns0:desc>Routing as implemented in the PULSE A0.9 instrument. The companion routing guide provides equivalent decision rules and question IDs.</ns0:desc><ns0:title>...</ns0:title>
+	<ns0:desc>...</ns0:desc>
+	<ns0:clipPath id="clip">
+		<ns0:rect x="0" y="0" width="1100" height="900" />
+	</ns0:clipPath>
+	<ns0:g id="group" transform="scale(1,-1) translate(0,-900)" style="clip-path: url(#clip)">
+		<ns0:g transform="">
+			<ns0:rect x="0" y="0" width="1100" height="900" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;" />
+			<ns0:rect x="35" y="854" width="6" height="28" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,41%,33%); fill-rule: evenodd;" />
+			<ns0:text x="55" y="854.0" style="font-family: Helvetica-Bold; font-size: 26px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1708) scale(1,-1)">2. Powertrain, charging and household role</ns0:text>
+			<ns0:text x="35" y="822.0" style="font-family: Helvetica; font-size: 13px;fill: rgb(31%,41%,37%); stroke:none;" transform="translate(0,1644) scale(1,-1)">Powertrain gates actual charging experience. A household or realistic future role supports service evaluation.</ns0:text>
+			<ns0:path d="M 35,32 L 1065,32 Z" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1;" />
+			<ns0:text x="35" y="13.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(31%,41%,37%); stroke:none;" transform="translate(0,26) scale(1,-1)">PULSE citizen survey | A0.9 instrument | 6 November 2026 | Routing logic is unchanged by the compact presentation.</ns0:text>
+			<ns0:rect x="35" y="688" width="1030" height="100" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(90%,95%,92%); fill-rule: evenodd;" />
+			<ns0:text x="50" y="760.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1520) scale(1,-1)">Establish household vehicle access and powertrains</ns0:text>
+			<ns0:text x="50" y="738.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1476) scale(1,-1)">Regular or shared/limited access asks which powertrains are available. Multiple types may be selected. Someone without current vehicle access can still report a realistic future household role.</ns0:text>
+			<ns0:text x="50" y="718.455" style="font-family: Helvetica; font-size: 9.5px;fill: rgb(31%,41%,37%); stroke:none;" transform="translate(0,1436) scale(1,-1)">A-VEH-ACCESS-01 = 1 or 2; A-HH-PT-01; A-FUT-ROLE = 1</ns0:text>
+			<ns0:rect x="35" y="523" width="480" height="112" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(97%,93%,85%); fill-rule: evenodd;" />
+			<ns0:text x="50" y="607.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1214) scale(1,-1)">Actual plug-in charging gate</ns0:text>
+			<ns0:text x="50" y="585.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1170) scale(1,-1)">Household vehicle access AND a battery-electric vehicle or plug-in hybrid are required</ns0:text>
+			<ns0:text x="50" y="569.255" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1138) scale(1,-1)">to ask the current charging role.</ns0:text>
+			<ns0:text x="50" y="549.6600000000001" style="font-family: Helvetica; font-size: 9.5px;fill: rgb(31%,41%,37%); stroke:none;" transform="translate(0,1099) scale(1,-1)">A-HH-PT-01 contains code 1 (BEV) or 2 (PHEV)</ns0:text>
+			<ns0:rect x="585" y="523" width="480" height="112" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(97%,93%,85%); fill-rule: evenodd;" />
+			<ns0:text x="600" y="607.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1214) scale(1,-1)">Private eligibility is assessed for each service</ns0:text>
+			<ns0:text x="600" y="585.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1170) scale(1,-1)">(Household vehicle access OR realistic future household role) AND the respondent</ns0:text>
+			<ns0:text x="600" y="569.255" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1138) scale(1,-1)">can evaluate that service.</ns0:text>
+			<ns0:text x="600" y="549.6600000000001" style="font-family: Helvetica; font-size: 9.5px;fill: rgb(31%,41%,37%); stroke:none;" transform="translate(0,1099) scale(1,-1)">F-EVAL-W = 1 for WPT; F-EVAL-V = 1 for V2G</ns0:text>
+			<ns0:path d="M 550,688 L 550,670 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:path d="M 550,670 L 275,670 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:path d="M 275,670 L 275,635 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:polygon points="275 635, 278.5 642, 271.5 642" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:path d="M 550,670 L 825,670 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:path d="M 825,670 L 825,635 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:polygon points="825 635, 828.5 642, 821.5 642" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:rect x="35" y="319" width="280" height="126" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(97%,93%,85%); fill-rule: evenodd;" />
+			<ns0:text x="50" y="417.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,834) scale(1,-1)">Knows the charging</ns0:text>
+			<ns0:text x="50" y="396.75" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,793) scale(1,-1)">arrangements?</ns0:text>
+			<ns0:text x="50" y="374.8" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,749) scale(1,-1)">Usually charges/arranges charging, or knows</ns0:text>
+			<ns0:text x="50" y="359.005" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,718) scale(1,-1)">where someone else charges it.</ns0:text>
+			<ns0:text x="50" y="339.40999999999997" style="font-family: Helvetica; font-size: 9.5px;fill: rgb(31%,41%,37%); stroke:none;" transform="translate(0,678) scale(1,-1)">A-CHG-ROLE = 1 or 2</ns0:text>
+			<ns0:rect x="345" y="319" width="170" height="126" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,95%,94%); fill-rule: evenodd;" />
+			<ns0:text x="360" y="417.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,834) scale(1,-1)">Skip actual details</ns0:text>
+			<ns0:text x="360" y="395.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,790) scale(1,-1)">Keep the later service and</ns0:text>
+			<ns0:text x="360" y="379.255" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,758) scale(1,-1)">public-view routes.</ns0:text>
+			<ns0:path d="M 275,523 L 275,485 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:path d="M 275,485 L 175,485 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:path d="M 175,485 L 175,445 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:polygon points="175 445, 178.5 452, 171.5 452" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:rect x="190.2155" y="488" width="29.56899999999999" height="20" rx="4" ry="0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;" />
+			<ns0:text x="195.2155" y="492.0" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(9%,41%,33%); stroke:none;" transform="translate(0,984) scale(1,-1)">Yes</ns0:text>
+			<ns0:path d="M 275,485 L 430,485 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:path d="M 430,485 L 430,445 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:polygon points="430 445, 433.5 452, 426.5 452" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:rect x="379.6685" y="488" width="24.66300000000001" height="20" rx="4" ry="0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;" />
+			<ns0:text x="384.6685" y="492.0" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(9%,41%,33%); stroke:none;" transform="translate(0,984) scale(1,-1)">No</ns0:text>
+			<ns0:path d="M 315,380 L 345,380 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:polygon points="345 380, 338 383.5, 338 376.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:rect x="317.6685" y="397" width="24.66300000000001" height="20" rx="4" ry="0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;" />
+			<ns0:text x="322.6685" y="401.0" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(9%,41%,33%); stroke:none;" transform="translate(0,802) scale(1,-1)">No</ns0:text>
+			<ns0:rect x="35" y="127" width="480" height="123" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,94%,97%); fill-rule: evenodd;" />
+			<ns0:text x="50" y="222.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,444) scale(1,-1)">Ask current charging details</ns0:text>
+			<ns0:text x="50" y="200.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,400) scale(1,-1)">Ask locations. With one location, derive the main location; with several, ask which is</ns0:text>
+			<ns0:text x="50" y="184.25500000000002" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,368) scale(1,-1)">used most. Home/out-of-home details follow the selected locations.</ns0:text>
+			<ns0:text x="50" y="164.65999999999997" style="font-family: Helvetica; font-size: 9.5px;fill: rgb(31%,41%,37%); stroke:none;" transform="translate(0,329) scale(1,-1)">A-CHG-LOC; A-CHG-MAIN; A-CHG-OUT; A-CHG-SCHED; A-CHG-PACE-01</ns0:text>
+			<ns0:path d="M 175,319 L 175,250 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:polygon points="175 250, 178.5 257, 171.5 257" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:rect x="182.2155" y="276" width="29.56899999999999" height="20" rx="4" ry="0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;" />
+			<ns0:text x="187.2155" y="280.0" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(9%,41%,33%); stroke:none;" transform="translate(0,560) scale(1,-1)">Yes</ns0:text>
+			<ns0:rect x="585" y="319" width="225" height="126" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,94%,97%); fill-rule: evenodd;" />
+			<ns0:text x="600" y="417.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,834) scale(1,-1)">At least one service</ns0:text>
+			<ns0:text x="600" y="396.75" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,793) scale(1,-1)">eligible</ns0:text>
+			<ns0:text x="600" y="374.8" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,749) scale(1,-1)">Assign one private WPT or V2G</ns0:text>
+			<ns0:text x="600" y="359.005" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,718) scale(1,-1)">module; continue to Figure 3.</ns0:text>
+			<ns0:rect x="840" y="319" width="225" height="126" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,95%,94%); fill-rule: evenodd;" />
+			<ns0:text x="855" y="417.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,834) scale(1,-1)">Neither service eligible</ns0:text>
+			<ns0:text x="855" y="395.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,790) scale(1,-1)">Assign one public reference concept;</ns0:text>
+			<ns0:text x="855" y="379.255" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,758) scale(1,-1)">continue to Figure 3.</ns0:text>
+			<ns0:path d="M 825,523 L 825,485 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:path d="M 825,485 L 697,485 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:path d="M 697,485 L 697,445 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:polygon points="697 445, 700.5 452, 693.5 452" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:rect x="720.2155" y="488" width="29.56899999999996" height="20" rx="4" ry="0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;" />
+			<ns0:text x="725.2155" y="492.0" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(9%,41%,33%); stroke:none;" transform="translate(0,984) scale(1,-1)">Yes</ns0:text>
+			<ns0:path d="M 825,485 L 952,485 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:path d="M 952,485 L 952,445 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:polygon points="952 445, 955.5 452, 948.5 452" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:rect x="907.6685" y="488" width="24.66300000000001" height="20" rx="4" ry="0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;" />
+			<ns0:text x="912.6685" y="492.0" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(9%,41%,33%); stroke:none;" transform="translate(0,984) scale(1,-1)">No</ns0:text>
+			<ns0:rect x="585" y="127" width="480" height="123" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,95%,94%); fill-rule: evenodd;" />
+			<ns0:text x="600" y="222.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,444) scale(1,-1)">Non-car users and non-drivers can participate</ns0:text>
+			<ns0:text x="600" y="200.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,400) scale(1,-1)">A household or future role can support private evaluation. Paid-work driving or its</ns0:text>
+			<ns0:text x="600" y="184.25500000000002" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,368) scale(1,-1)">powertrain alone does not establish household access. Otherwise the public route</ns0:text>
+			<ns0:text x="600" y="168.46" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,336) scale(1,-1)">remains available.</ns0:text>
+			<ns0:rect x="35" y="43" width="1030" height="52" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(90%,95%,92%); fill-rule: evenodd;" />
+			<ns0:text x="50" y="67.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,134) scale(1,-1)">Everyone sees neutral WPT and V2G descriptions before F-EVAL-W and F-EVAL-V.</ns0:text>
+		</ns0:g>
+	</ns0:g>
+</ns0:svg>

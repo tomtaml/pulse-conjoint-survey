@@ -26,3 +26,10 @@ pulse-partner-notes*.json
 *.sqlite3
 *.db
 .guard-test-*/
+
+# Survey data and derived analysis stay outside source control
+analysis/data/
+analysis/output/
+pulse-v2-test-session*.json
+pulse-v2-comments-and-timing*.md
+*.ndjson

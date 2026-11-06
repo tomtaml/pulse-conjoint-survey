@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How the PULSE questionnaire routes current vehicle users, future users and non-users.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; img-src 'self'; base-uri 'self'">
+  <title>PULSE · Current survey routing</title>
+  <link rel="stylesheet" href="./routing.css">
+</head>
+<body>
+  <header><a class="brand" href="./">PULSE <span>Citizen survey</span></a><a href="./">Open questionnaire →</a></header>
+  <main>
+    <p class="eyebrow">Partner reference · 6 November 2026</p>
+    <h1>How the survey assigns each path</h1>
+    <p class="lede">Current powertrain controls the questions about actual charging. Household or future roles and the ability to evaluate each service determine the private WPT, private V2G or public route.</p>
+    <div class="overview"><p><strong>Mobility and technology are separate decisions.</strong> Someone who does not own or drive a car can still compare a future trip, consider a future household service, or give a public/non-user view.</p><p>The compact layout changes the presentation and page grouping. Question wording, response codes, eligibility, assignment probabilities and choice profiles stay the same.</p></div>
+    <nav aria-label="Routing figures"><a href="#mobility">1. Mobility and journey</a><a href="#charging">2. Powertrain and household role</a><a href="#services">3. Default assignment</a><a href="#driver-review">4. Driver comparison option</a><a href="#rules">Decision rules</a></nav>
+    <section id="mobility"><h2>1. Mobility background and real journey</h2><figure><a href="./assets/routing/routing-mobility.svg"><img src="./assets/routing/routing-mobility.svg" alt="Mobility routing: transport offers require at least two evaluable future options; a recurring journey controls the separate COM-B and habit questions. All continuing respondents proceed to services."></a><figcaption>The future-trip choice task is evaluated separately from the respondent's recurring real journey. Open the figure for a larger view.</figcaption></figure></section>
+    <section id="charging"><h2>2. Current charging and household or future role</h2><figure><a href="./assets/routing/routing-charging.svg"><img src="./assets/routing/routing-charging.svg" alt="Charging routing: household plug-in access plus knowledge controls actual charging questions. A household or future role plus a service-evaluation Yes supports a private service route; others reach a public reference concept."></a><figcaption>BEV/PHEV access is needed for questions about actual plug-in charging. Hypothetical service evaluation can also be supported by a household or future role.</figcaption></figure></section>
+    <section id="services"><h2>3. Default: one service route, then shared follow-up</h2><figure><a href="./assets/routing/routing-services.svg"><img src="./assets/routing/routing-services.svg" alt="Default service assignment: WPT-only and V2G-only eligibility assign that service; dual eligibility draws either with probability one half; neither eligible leads to the public route. The service context gate controls its choice tasks."></a><figcaption>The ordinary survey has at most four scored transport choices plus six choices from one technology, with two additional practice tasks. Optional information comes after choices and before its outcomes and benefit ratings.</figcaption></figure></section>
+    <section id="driver-review"><h2>4. Optional partner test: both DCEs for drivers</h2><p><a href="./?dce=both-drivers">Open the driver-comparison review →</a></p><figure><a href="./assets/routing/routing-driver-review.svg"><img src="./assets/routing/routing-driver-review.svg" alt="Optional driver comparison: current drivers with both services privately eligible compare the primary service first and then the other service. Each context gate can skip that service's choices. Other respondents retain the ordinary evaluable route."></a><figcaption>This option can show 16 scored choices and three practices. Only the primary service receives the household acceptance battery; later reflections return to that service. Non-car respondents keep transport choices and evaluable household/future services, with public views otherwise.</figcaption></figure></section>
+    <section id="rules"><h2>The current decision rules</h2><div class="table-wrap"><table><thead><tr><th>Answers</th><th>Effect on the path</th></tr></thead><tbody>
+      <tr><th scope="row">Usual driving and paid-work driving</th><td>Reported car driving removes the duplicate current-driving question. Paid-work driving asks its own powertrain question; it does not establish household access.</td></tr>
+      <tr><th scope="row">Household vehicle access</th><td>Regular or shared/limited access asks household powertrains. Multiple powertrains can be selected.</td></tr>
+      <tr><th scope="row">Household BEV or PHEV access</th><td>Ask the current charging role. Actual charging details require that the respondent charges it, arranges charging, or knows where it is charged.</td></tr>
+      <tr><th scope="row">Future trip and evaluable offers</th><td>At least two of private EV, shared EV and accessible public transport must be evaluable. Rejecting the scenario skips the transport DCE. A trip-purpose refusal alone does not skip it.</td></tr>
+      <tr><th scope="row">Recurring real journey</th><td>A recurring journey enables the relevant mobility constructs. No recurring journey skips those constructs while keeping the service paths available.</td></tr>
+      <tr><th scope="row">Alternative mode and current mode</th><td>Capability, opportunity and reflective motivation refer to the confirmed alternative; habit refers to the current journey mode. Conditional intentions require all necessary changes to be named.</td></tr>
+      <tr><th scope="row">Household or realistic future role + service evaluation</th><td>Each service is privately eligible only if that role exists and its F-EVAL answer is Yes. Everyone sees both neutral concept descriptions before these answers.</td></tr>
+      <tr><th scope="row">One, both or neither service eligible</th><td>One eligible service assigns that one. Both eligible gives each a 0.5 probability. Neither eligible gives a public reference concept, also 0.5/0.5 by default.</td></tr>
+      <tr><th scope="row">WPT/V2G scenario context</th><td>Yes shows one practice and six scored choices. No, uncertainty or refusal skips only that technology DCE; acceptance and downstream questions remain.</td></tr>
+      <tr><th scope="row">Driver comparison review</th><td>The separate partner link adds the other DCE only for current drivers who are privately eligible for both services. Each scenario remains independently skippable. The original assignment selects which is first; only that service has the acceptance battery.</td></tr>
+      <tr><th scope="row">Optional modules</th><td>Information, ranking, values, prosumer, convenience and extra conditions are off by default. When information is enabled, allocation is a separate seeded 1:1-probability draw.</td></tr>
+    </tbody></table></div><p class="note">The selected test site identifies the questionnaire context, not verified residence. Parking access, affordability and demographics describe circumstances; they do not set the private technology assignment. Partner technology links are recorded overrides rather than random allocations.</p></section>
+  </main>
+  <footer>PULSE WP1 · A0.9 questionnaire · Compact presentation · This guide contains routing rules only, not respondent records.</footer>
+</body>
+</html>
