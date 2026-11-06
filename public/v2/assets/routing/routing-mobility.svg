@@ -1,0 +1,110 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1100" height="900" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1100 900" version="1.0" fill-rule="evenodd">
+	<ns0:title>Routing Mobility</ns0:title><ns0:desc>Routing as implemented in the PULSE A0.9 instrument. The companion routing guide provides equivalent decision rules and question IDs.</ns0:desc><ns0:title>...</ns0:title>
+	<ns0:desc>...</ns0:desc>
+	<ns0:clipPath id="clip">
+		<ns0:rect x="0" y="0" width="1100" height="900" />
+	</ns0:clipPath>
+	<ns0:g id="group" transform="scale(1,-1) translate(0,-900)" style="clip-path: url(#clip)">
+		<ns0:g transform="">
+			<ns0:rect x="0" y="0" width="1100" height="900" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;" />
+			<ns0:rect x="35" y="854" width="6" height="28" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,41%,33%); fill-rule: evenodd;" />
+			<ns0:text x="55" y="854.0" style="font-family: Helvetica-Bold; font-size: 26px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1708) scale(1,-1)">1. Mobility background and journey</ns0:text>
+			<ns0:text x="35" y="822.0" style="font-family: Helvetica; font-size: 13px;fill: rgb(31%,41%,37%); stroke:none;" transform="translate(0,1644) scale(1,-1)">After consent, adult confirmation and site choice, transport and real-journey constructs use separate gates. Non-car users remain included.</ns0:text>
+			<ns0:path d="M 35,32 L 1065,32 Z" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1;" />
+			<ns0:text x="35" y="13.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(31%,41%,37%); stroke:none;" transform="translate(0,26) scale(1,-1)">PULSE citizen survey | A0.9 instrument | 6 November 2026 | Routing logic is unchanged by the compact presentation.</ns0:text>
+			<ns0:rect x="35" y="700" width="1030" height="88" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(90%,95%,92%); fill-rule: evenodd;" />
+			<ns0:text x="50" y="760.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1520) scale(1,-1)">Background: current travel and driving roles</ns0:text>
+			<ns0:text x="50" y="738.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1476) scale(1,-1)">Usual modes and the main mode describe everyday travel. Current driving is asked only if it is not already reported. Paid-work driving asks about work powertrains separately.</ns0:text>
+			<ns0:text x="50" y="718.455" style="font-family: Helvetica; font-size: 9.5px;fill: rgb(31%,41%,37%); stroke:none;" transform="translate(0,1436) scale(1,-1)">A-MOB-01 / A-MOB-PRIMARY; R-DRIVE-01; A-PRO-DRIVE-01 / A-PRO-PT-01</ns0:text>
+			<ns0:rect x="35" y="523" width="480" height="112" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(97%,93%,85%); fill-rule: evenodd;" />
+			<ns0:text x="50" y="607.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1214) scale(1,-1)">Can the future transport offers be compared?</ns0:text>
+			<ns0:text x="50" y="585.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1170) scale(1,-1)">The scenario must not be rejected AND at least two offers must be evaluable.</ns0:text>
+			<ns0:text x="50" y="569.255" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1138) scale(1,-1)">Declining to give the trip purpose does not block offer evaluation.</ns0:text>
+			<ns0:text x="50" y="549.6600000000001" style="font-family: Helvetica; font-size: 9.5px;fill: rgb(31%,41%,37%); stroke:none;" transform="translate(0,1099) scale(1,-1)">B-TRIP-CONTEXT != 97; at least two codes 1-3 in B-MODE-EVAL</ns0:text>
+			<ns0:rect x="585" y="523" width="480" height="112" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(97%,93%,85%); fill-rule: evenodd;" />
+			<ns0:text x="600" y="607.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1214) scale(1,-1)">Is there a recurring real journey?</ns0:text>
+			<ns0:text x="600" y="585.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1170) scale(1,-1)">One journey in the past four weeks is selected as the reference. Current mode and a</ns0:text>
+			<ns0:text x="600" y="569.255" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1138) scale(1,-1)">realistic alternative are established for that journey.</ns0:text>
+			<ns0:text x="600" y="549.6600000000001" style="font-family: Helvetica; font-size: 9.5px;fill: rgb(31%,41%,37%); stroke:none;" transform="translate(0,1099) scale(1,-1)">A-JRN-01 = 1-4; A-JRN-02; C-ALT-01</ns0:text>
+			<ns0:path d="M 550,700 L 550,670 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:path d="M 550,670 L 275,670 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:path d="M 275,670 L 275,635 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:polygon points="275 635, 278.5 642, 271.5 642" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:path d="M 550,670 L 825,670 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:path d="M 825,670 L 825,635 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:polygon points="825 635, 828.5 642, 821.5 642" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:rect x="35" y="351" width="225" height="104" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,94%,97%); fill-rule: evenodd;" />
+			<ns0:text x="50" y="427.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,854) scale(1,-1)">Show transport DCE</ns0:text>
+			<ns0:text x="50" y="405.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,810) scale(1,-1)">One practice and four scored</ns0:text>
+			<ns0:text x="50" y="389.255" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,778) scale(1,-1)">choices.</ns0:text>
+			<ns0:text x="50" y="369.65999999999997" style="font-family: Helvetica; font-size: 9.5px;fill: rgb(31%,41%,37%); stroke:none;" transform="translate(0,739) scale(1,-1)">T09-P; T09-01 to T09-04</ns0:text>
+			<ns0:rect x="290" y="351" width="225" height="104" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,95%,94%); fill-rule: evenodd;" />
+			<ns0:text x="305" y="427.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,854) scale(1,-1)">Skip transport DCE</ns0:text>
+			<ns0:text x="305" y="405.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,810) scale(1,-1)">Continue to the real-journey and</ns0:text>
+			<ns0:text x="305" y="389.255" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,778) scale(1,-1)">service questions.</ns0:text>
+			<ns0:rect x="585" y="351" width="225" height="104" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,94%,97%); fill-rule: evenodd;" />
+			<ns0:text x="600" y="427.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,854) scale(1,-1)">Ask journey constructs</ns0:text>
+			<ns0:text x="600" y="405.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,810) scale(1,-1)">Use the selected real journey and</ns0:text>
+			<ns0:text x="600" y="389.255" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,778) scale(1,-1)">confirmed mode referents.</ns0:text>
+			<ns0:rect x="840" y="351" width="225" height="104" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,95%,94%); fill-rule: evenodd;" />
+			<ns0:text x="855" y="427.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,854) scale(1,-1)">Skip journey constructs</ns0:text>
+			<ns0:text x="855" y="405.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,810) scale(1,-1)">Continue to charging circumstances</ns0:text>
+			<ns0:text x="855" y="389.255" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,778) scale(1,-1)">and services.</ns0:text>
+			<ns0:path d="M 275,523 L 275,490 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:path d="M 275,490 L 147,490 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:path d="M 147,490 L 147,455 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:polygon points="147 455, 150.5 462, 143.5 462" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:rect x="165.2155" y="492" width="29.56899999999999" height="20" rx="4" ry="0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;" />
+			<ns0:text x="170.2155" y="496.0" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(9%,41%,33%); stroke:none;" transform="translate(0,992) scale(1,-1)">Yes</ns0:text>
+			<ns0:path d="M 275,490 L 402,490 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:path d="M 402,490 L 402,455 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:polygon points="402 455, 405.5 462, 398.5 462" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:rect x="357.6685" y="492" width="24.66300000000001" height="20" rx="4" ry="0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;" />
+			<ns0:text x="362.6685" y="496.0" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(9%,41%,33%); stroke:none;" transform="translate(0,992) scale(1,-1)">No</ns0:text>
+			<ns0:path d="M 825,523 L 825,490 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:path d="M 825,490 L 697,490 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:path d="M 697,490 L 697,455 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:polygon points="697 455, 700.5 462, 693.5 462" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:rect x="718.2155" y="492" width="29.56899999999996" height="20" rx="4" ry="0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;" />
+			<ns0:text x="723.2155" y="496.0" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(9%,41%,33%); stroke:none;" transform="translate(0,992) scale(1,-1)">Yes</ns0:text>
+			<ns0:path d="M 825,490 L 952,490 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:path d="M 952,490 L 952,455 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:polygon points="952 455, 955.5 462, 948.5 462" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:rect x="910.6685" y="492" width="24.66300000000001" height="20" rx="4" ry="0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;" />
+			<ns0:text x="915.6685" y="496.0" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(9%,41%,33%); stroke:none;" transform="translate(0,992) scale(1,-1)">No</ns0:text>
+			<ns0:rect x="35" y="159" width="480" height="126" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,95%,94%); fill-rule: evenodd;" />
+			<ns0:text x="50" y="257.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,514) scale(1,-1)">Availability is specific to the hypothetical trip</ns0:text>
+			<ns0:text x="50" y="235.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,470) scale(1,-1)">Actual weekly modes do not automatically remove future offers. Choosing only one</ns0:text>
+			<ns0:text x="50" y="219.25500000000002" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,438) scale(1,-1)">evaluable offer, no evaluable offer, or rejecting the trip scenario skips these choice</ns0:text>
+			<ns0:text x="50" y="203.46" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,406) scale(1,-1)">cards.</ns0:text>
+			<ns0:text x="50" y="183.865" style="font-family: Helvetica; font-size: 9.5px;fill: rgb(31%,41%,37%); stroke:none;" transform="translate(0,367) scale(1,-1)">Transport DCE is before COM-B; both use their own reference context.</ns0:text>
+			<ns0:path d="M 147,351 L 147,320 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:path d="M 147,320 L 275,320 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:path d="M 275,320 L 275,285 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:polygon points="275 285, 278.5 292, 271.5 292" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:path d="M 402,351 L 402,320 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:path d="M 402,320 L 275,320 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:polygon points="275 320, 282 316.5, 282 323.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:rect x="585" y="145" width="480" height="170" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,94%,97%); fill-rule: evenodd;" />
+			<ns0:text x="600" y="287.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,574) scale(1,-1)">Separate the current mode from the alternative</ns0:text>
+			<ns0:text x="600" y="265.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,530) scale(1,-1)">A confirmed alternative shows capability, opportunity and reflective motivation. A</ns0:text>
+			<ns0:text x="600" y="249.25500000000002" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,498) scale(1,-1)">known current mode shows habit, even without a feasible alternative. Intention is</ns0:text>
+			<ns0:text x="600" y="233.46" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,466) scale(1,-1)">shown when an alternative is valid; conditional intentions need all necessary changes</ns0:text>
+			<ns0:text x="600" y="217.66500000000002" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,435) scale(1,-1)">to be named.</ns0:text>
+			<ns0:text x="600" y="198.07000000000005" style="font-family: Helvetica; font-size: 9.5px;fill: rgb(31%,41%,37%); stroke:none;" transform="translate(0,396) scale(1,-1)">C-ALT-01 = 1-5; or 6 + C-ALT-USED; or 97 + C-ALT-02. C-COND-01 controls conditional intentions.</ns0:text>
+			<ns0:path d="M 697,351 L 697,315 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:polygon points="697 315, 700.5 322, 693.5 322" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:rect x="35" y="42" width="1030" height="58" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(90%,95%,92%); fill-rule: evenodd;" />
+			<ns0:text x="50" y="72.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,144) scale(1,-1)">Everyone continuing proceeds to household charging and service evaluation (Figure 2).</ns0:text>
+			<ns0:path d="M 275,159 L 275,100 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:polygon points="275 100, 278.5 107, 271.5 107" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:path d="M 825,145 L 825,100 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:polygon points="825 100, 828.5 107, 821.5 107" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:path d="M 1065,409 L 1085,409 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:path d="M 1085,409 L 1085,121 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:path d="M 1085,121 L 1000,121 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:path d="M 1000,121 L 1000,100 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:polygon points="1000 100, 1003.5 107, 996.5 107" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+		</ns0:g>
+	</ns0:g>
+</ns0:svg>

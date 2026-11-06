@@ -1,0 +1,80 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1100" height="900" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1100 900" version="1.0" fill-rule="evenodd">
+	<ns0:title>Routing Driver Review</ns0:title><ns0:desc>Routing as implemented in the PULSE A0.9 instrument. The companion routing guide provides equivalent decision rules and question IDs.</ns0:desc><ns0:title>...</ns0:title>
+	<ns0:desc>...</ns0:desc>
+	<ns0:clipPath id="clip">
+		<ns0:rect x="0" y="0" width="1100" height="900" />
+	</ns0:clipPath>
+	<ns0:g id="group" transform="scale(1,-1) translate(0,-900)" style="clip-path: url(#clip)">
+		<ns0:g transform="">
+			<ns0:rect x="0" y="0" width="1100" height="900" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;" />
+			<ns0:rect x="35" y="854" width="6" height="28" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,41%,33%); fill-rule: evenodd;" />
+			<ns0:text x="55" y="854.0" style="font-family: Helvetica-Bold; font-size: 26px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1708) scale(1,-1)">4. Optional driver comparison of both DCEs</ns0:text>
+			<ns0:text x="35" y="822.0" style="font-family: Helvetica; font-size: 13px;fill: rgb(31%,41%,37%); stroke:none;" transform="translate(0,1644) scale(1,-1)">This partner-review option adds a second service comparison. The ordinary single-technology route remains the default.</ns0:text>
+			<ns0:path d="M 35,32 L 1065,32 Z" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1;" />
+			<ns0:text x="35" y="13.0" style="font-family: Helvetica; font-size: 9px;fill: rgb(31%,41%,37%); stroke:none;" transform="translate(0,26) scale(1,-1)">PULSE citizen survey | A0.9 instrument | 6 November 2026 | Routing logic is unchanged by the compact presentation.</ns0:text>
+			<ns0:rect x="35" y="704" width="1030" height="84" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(90%,95%,92%); fill-rule: evenodd;" />
+			<ns0:text x="50" y="760.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1520) scale(1,-1)">Partner link: ?dce=both-drivers</ns0:text>
+			<ns0:text x="50" y="738.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1476) scale(1,-1)">The review flag is retained in the response and analysis metadata. Eligibility and each scenario context still apply. Transport choices keep their own evaluability gate.</ns0:text>
+			<ns0:rect x="340" y="523" width="420" height="112" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(97%,93%,85%); fill-rule: evenodd;" />
+			<ns0:text x="355" y="607.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1214) scale(1,-1)">Current driver AND both services privately eligible?</ns0:text>
+			<ns0:text x="355" y="585.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1170) scale(1,-1)">Driving is reported in usual modes or R-DRIVE-01. Both services also need</ns0:text>
+			<ns0:text x="355" y="569.255" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,1138) scale(1,-1)">a household/future role and F-EVAL = Yes.</ns0:text>
+			<ns0:path d="M 550,704 L 550,635 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:polygon points="550 635, 553.5 642, 546.5 642" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:rect x="35" y="342" width="300" height="108" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,95%,94%); fill-rule: evenodd;" />
+			<ns0:text x="50" y="422.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,844) scale(1,-1)">Keep the ordinary eligible route</ns0:text>
+			<ns0:text x="50" y="400.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,800) scale(1,-1)">A non-driver can still compare an evaluable future</ns0:text>
+			<ns0:text x="50" y="384.255" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,768) scale(1,-1)">household service, or give a public/non-user view.</ns0:text>
+			<ns0:rect x="390" y="342" width="675" height="108" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,94%,97%); fill-rule: evenodd;" />
+			<ns0:text x="405" y="422.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,844) scale(1,-1)">Primary service first; only its household acceptance module</ns0:text>
+			<ns0:text x="405" y="400.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,800) scale(1,-1)">The ordinary assignment selects the primary service. With dual eligibility, each service has a 0.5 probability of being first,</ns0:text>
+			<ns0:text x="405" y="384.255" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,768) scale(1,-1)">unless a recorded partner override sets the order.</ns0:text>
+			<ns0:path d="M 550,523 L 550,487 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:path d="M 550,487 L 185,487 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:path d="M 185,487 L 185,450 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:polygon points="185 450, 188.5 457, 181.5 457" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:rect x="297.6685" y="491" width="24.66300000000001" height="20" rx="4" ry="0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;" />
+			<ns0:text x="302.6685" y="495.0" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(9%,41%,33%); stroke:none;" transform="translate(0,990) scale(1,-1)">No</ns0:text>
+			<ns0:path d="M 550,487 L 725,487 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:path d="M 725,487 L 725,450 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:polygon points="725 450, 728.5 457, 721.5 457" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:rect x="628.2155" y="491" width="29.56899999999996" height="20" rx="4" ry="0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;" />
+			<ns0:text x="633.2155" y="495.0" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(9%,41%,33%); stroke:none;" transform="translate(0,990) scale(1,-1)">Yes</ns0:text>
+			<ns0:rect x="35" y="158" width="300" height="112" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,95%,94%); fill-rule: evenodd;" />
+			<ns0:text x="50" y="242.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,484) scale(1,-1)">Non-car respondents stay included</ns0:text>
+			<ns0:text x="50" y="220.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,440) scale(1,-1)">Transport when evaluable; a technology service</ns0:text>
+			<ns0:text x="50" y="204.25500000000002" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,408) scale(1,-1)">through a household/future role when evaluable;</ns0:text>
+			<ns0:text x="50" y="188.46" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,376) scale(1,-1)">public views otherwise.</ns0:text>
+			<ns0:rect x="390" y="158" width="320" height="112" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(97%,93%,85%); fill-rule: evenodd;" />
+			<ns0:text x="405" y="242.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,484) scale(1,-1)">Primary DCE context gate</ns0:text>
+			<ns0:text x="405" y="220.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,440) scale(1,-1)">Yes: one practice plus six choices. No/uncertain: skip</ns0:text>
+			<ns0:text x="405" y="204.25500000000002" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,408) scale(1,-1)">these choices, then continue to the other service.</ns0:text>
+			<ns0:rect x="745" y="158" width="320" height="112" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(97%,93%,85%); fill-rule: evenodd;" />
+			<ns0:text x="760" y="242.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,484) scale(1,-1)">Other service context gate</ns0:text>
+			<ns0:text x="760" y="220.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,440) scale(1,-1)">A fresh concept, checks and scenario are provided.</ns0:text>
+			<ns0:text x="760" y="204.25500000000002" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,408) scale(1,-1)">Yes: one practice plus six choices. Otherwise skip</ns0:text>
+			<ns0:text x="760" y="188.46" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,376) scale(1,-1)">these choices.</ns0:text>
+			<ns0:path d="M 185,342 L 185,270 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:polygon points="185 270, 188.5 277, 181.5 277" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:path d="M 725,342 L 725,305 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:path d="M 725,305 L 550,305 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:path d="M 550,305 L 550,270 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:polygon points="550 270, 553.5 277, 546.5 277" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:path d="M 710,214 L 745,214 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:polygon points="745 214, 738 217.5, 738 210.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:rect x="709.8605" y="227" width="36.278999999999996" height="20" rx="4" ry="0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;" />
+			<ns0:text x="714.8605" y="231.0" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(9%,41%,33%); stroke:none;" transform="translate(0,462) scale(1,-1)">Then</ns0:text>
+			<ns0:rect x="35" y="43" width="1030" height="62" rx="10" ry="10" style="stroke: rgb(78%,85%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(90%,95%,92%); fill-rule: evenodd;" />
+			<ns0:text x="50" y="77.0" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,154) scale(1,-1)">Return to the primary service for reflections and benefits</ns0:text>
+			<ns0:text x="50" y="55.05" style="font-family: Helvetica; font-size: 11.7px;fill: rgb(12%,24%,21%); stroke:none;" transform="translate(0,110) scale(1,-1)">Maximum review burden: 16 scored choices plus 3 practices. The ordinary cap remains 10 scored choices plus 2 practices.</ns0:text>
+			<ns0:path d="M 185,158 L 185,130 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:path d="M 185,130 L 550,130 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:path d="M 550,130 L 550,105 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6; stroke-dasharray: 4, 3;" />
+			<ns0:polygon points="550 105, 553.5 112, 546.5 112" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+			<ns0:path d="M 905,158 L 905,130 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:path d="M 905,130 L 550,130 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:path d="M 550,130 L 550,105 Z" style="stroke: rgb(31%,41%,37%); stroke-linecap: butt; stroke-width: 1.6;" />
+			<ns0:polygon points="550 105, 553.5 112, 546.5 112" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,41%,37%); fill-rule: evenodd;" />
+		</ns0:g>
+	</ns0:g>
+</ns0:svg>

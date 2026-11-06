@@ -24,9 +24,10 @@ if model == "mobility"
     end
     T = T(T.comb_target == mobilityTarget,:);
 end
-metadata = ["session_id","record_kind","test_purpose","complete","instrument_version","site",...
+metadata = ["session_id","record_kind","test_purpose","complete","instrument_version","layout_version","dce_review_mode","site",...
     "technology","respondent_route","comb_target","active_ms"];
 names = string(T.Properties.VariableNames);
+metadata = metadata(ismember(metadata,names)); % Accept older prepared tables without layout metadata.
 features = names(~ismember(names,metadata));
 X = T{:,cellstr(features)};
 if ~isnumeric(X) || any(~isfinite(X),"all")

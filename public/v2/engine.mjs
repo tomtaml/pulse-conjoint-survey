@@ -1,4 +1,5 @@
 import {shuffle, ReviewClock} from '../v1/engine.mjs';
+import {COMPACT_LAYOUT} from './layout.mjs';
 export {shuffle, ReviewClock};
 
 export const VERSION='pulse-v2-A0.9-test-2026-11-04';
@@ -11,10 +12,10 @@ export const canonical=v=>Array.isArray(v)?`[${v.map(canonical).join(',')}]`:v&&
 function draw(seed,label){let n=2166136261;for(const c of `${seed}:${label}`){n^=c.charCodeAt(0);n=Math.imul(n,16777619);}return (n>>>0)/4294967296;}
 export function settingsFromURL(search='') {
   const params=new URLSearchParams(search),on=new Set((params.get('modules')||'').split(','));
-  return {values:on.has('values'),information:on.has('information'),ranking:on.has('ranking'),prosumer:on.has('prosumer'),convenience:on.has('convenience'),conditions:on.has('conditions'),technology_override:['wpt','v2g'].includes(params.get('technology'))?params.get('technology'):null};
+  return {values:on.has('values'),information:on.has('information'),ranking:on.has('ranking'),prosumer:on.has('prosumer'),convenience:on.has('convenience'),conditions:on.has('conditions'),technology_override:['wpt','v2g'].includes(params.get('technology'))?params.get('technology'):null,...(params.get('dce')==='both-drivers'?{review_both_dce:true}:{})};
 }
 export function freshState(seed=crypto.getRandomValues(new Uint32Array(1))[0],settings={}) {
-  return {version:2,session_id:crypto.randomUUID(),seed,settings:{...settingsFromURL(),...settings},started:false,finished:false,currentId:'welcome',answers:{},choices:{},choiceSnapshots:{},notes:{},checks:{},seen:[],clock:null,created_at:new Date().toISOString(),receipt:null};
+  return {version:2,layout_version:COMPACT_LAYOUT,session_id:crypto.randomUUID(),seed,settings:{...settingsFromURL(),...settings},started:false,finished:false,currentId:'welcome',answers:{},choices:{},choiceSnapshots:{},notes:{},checks:{},seen:[],clock:null,created_at:new Date().toISOString(),receipt:null};
 }
 export function derive(a={},state={}) {
   const journey=[1,2,3,4].includes(a['A-JRN-01']);
@@ -44,12 +45,25 @@ export function derive(a={},state={}) {
   const available=sorted(a['B-MODE-EVAL']).some(v=>v>=90)?[]:sorted(a['B-MODE-EVAL']).filter(v=>[1,2,3].includes(v));
   const transport=a['B-TRIP-CONTEXT']!==undefined&&a['B-TRIP-CONTEXT']!==97&&available.length>=2;
   const arm=technology&&state.settings?.information?(draw(state.seed,`information:${technology}:${privateRoute?'private':'public'}:${a['TEST-SITE-01']}`)<.5?'core_only':'added_explanation'):'off';
+  const driving=has(a['A-MOB-01'],4)||a['A-MOB-PRIMARY']===4?1:a['R-DRIVE-01']??null;
+  const technologyDCE=privateRoute&&(technology==='wpt'?a['G-WPT-CONTEXT-01']===1:a['G-V2G-CONTEXT-01']===1);
+  const reviewBoth=state.settings?.review_both_dce===true;
+  const secondaryTechnology=reviewBoth&&privateRoute&&driving===1&&eligibleW&&eligibleV?(technology==='wpt'?'v2g':'wpt'):null;
+  const secondaryTechnologyDCE=!!secondaryTechnology&&a[secondaryTechnology==='wpt'?'G-WPT-CONTEXT-01':'G-V2G-CONTEXT-01']===1;
   return {journey,currentMode,alternativeMode,conditional,definedChanges,changes,householdVehicle,householdOrFuture,plugAccess,informed,locations,available,transport,
-    driving:has(a['A-MOB-01'],4)||a['A-MOB-PRIMARY']===4?1:a['R-DRIVE-01']??null,
+    driving,
     chargingMain:locations.length===1?{value:locations[0],status:'derived_from_single_location'}:{value:a['A-CHG-MAIN']??null,status:locations.length>=2?'asked_multiple_locations':'not_applicable_or_unresolved'},
     eligibleW,eligibleV,ready,technology,privateRoute,publicRoute,allocationMethod,probability,arm,
     combTarget:!journey?'no_recurring_journey':!alternativeMode?'no_confirmed_alternative':conditional?definedChanges?'defined_conditional':'undefined_conditional':direct===6?'maintenance':'current_condition_option',
-    technologyDCE:privateRoute&&(technology==='wpt'?a['G-WPT-CONTEXT-01']===1:a['G-V2G-CONTEXT-01']===1)};
+    technologyDCE,...(reviewBoth?{dceReviewMode:'both_drivers',secondaryTechnology,secondaryTechnologyDCE,
+      technologyChoiceBlocks:[...(technologyDCE?[technology]:[]),...(secondaryTechnologyDCE?[secondaryTechnology]:[])]}:{})};
+}
+const secondaryQuestions={wpt:['D-WPT-CHECK-01','D-WPT-CHECK-02','D-PARK-CHECK-01','D-PARK-CHECK-02','G-WPT-CONTEXT-01'],v2g:['D-V2G-CHECK-01','D-V2G-CHECK-02','G-V2G-CONTEXT-01']};
+export const REVIEW_TIMING_IDS=Object.freeze(['intro-review-wpt-concept','intro-review-v2g-concept','intro-review-positioning','intro-review-return',
+  ...['D-WPT-CHECK-01','D-WPT-CHECK-02','D-PARK-CHECK-01','D-PARK-CHECK-02','D-V2G-CHECK-01','D-V2G-CHECK-02'].map(id=>'review-'+id)]);
+function questionRouteMatches(question,a,state){
+  if(state.settings?.review_both_dce===true){const secondary=derive(a,state).secondaryTechnology;if(secondaryQuestions[secondary]?.includes(question.id))return true;}
+  return routeMatches(question.route,a,state);
 }
 export function routeMatches(route,a,state={}) {
   const r=derive(a,state),s=state.settings||{};
@@ -149,6 +163,17 @@ export function pathFor(data,state) {
     for(const id of ['G-EMF-01','G-W-EMF-CONC-01','G-DATA-CONC-01','G-DATA-USE-01','G-ACCESS-01'])q(id);
     if(r.technology==='wpt'){info('wpt_gate','G');q('G-WPT-CONTEXT-01');if(r.technologyDCE){info('wpt_terms','G');tasks('wpt');}}
     else{info('v2g_terms','G');info('v2g_payment','G');q('G-V2G-CONTEXT-01');if(r.technologyDCE)tasks('v2g');}
+    if(r.secondaryTechnology){
+      const secondary=r.secondaryTechnology;
+      info(`review-${secondary}-concept`,'G',{...data.instructions[secondary],title:`A different service: ${data.instructions[secondary].title}`});
+      if(secondary==='wpt')info('review-positioning','G',data.instructions.positioning);
+      for(const id of secondaryQuestions[secondary].filter(id=>id.startsWith('D-')))steps.push({id:'review-'+id,kind:'questions',section:'G',question_ids:[id]});
+      const gate=secondary==='wpt'?'G-WPT-CONTEXT-01':'G-V2G-CONTEXT-01';
+      if(secondary==='wpt')info('wpt_gate','G');else{info('v2g_terms','G');info('v2g_payment','G');}
+      steps.push({id:gate,kind:'questions',section:'G',question_ids:[gate]});
+      if(r.secondaryTechnologyDCE){if(secondary==='wpt')info('wpt_terms','G');tasks(secondary);}
+      info('review-return','G',{title:`Return to ${r.technology==='wpt'?'wireless charging':'V2G'}`,body:'The additional offer comparison is finished. For the following questions, think again about [TECH], the service you considered in the household questions.'});
+    }
   }else info('public','G');
   if(r.arm==='added_explanation')info('information','G',{title:'Some possible benefits and their conditions',body:data.information_cards[r.technology].join('\n\n')});
   for(const id of ['G-W-BI-POST-01','G-W-BI-POST-02','G-W-BI-POST-03','G-V-BI-POST-01','G-V-BI-POST-02','G-V-BI-POST-03','G-PUB-SUPPORT-POST-01','G-PUB-ATT-POST-01'])q(id);
@@ -169,7 +194,7 @@ const clear=(a,prefixes)=>{for(const id of Object.keys(a))if(prefixes.some(p=>id
 export function cleanState(data,state) {
   const next=structuredClone(state),a=next.answers;
   for(let pass=0;pass<3;pass++)for(const q of data.questions){
-    if(!routeMatches(q.route,a,next)||q.optional_module&&!next.settings?.[q.optional_module]){delete a[q.id];continue;}
+    if(!questionRouteMatches(q,a,next)||q.optional_module&&!next.settings?.[q.optional_module]){delete a[q.id];continue;}
     const value=a[q.id],opts=optionsFor(q,a,next,data),codes=opts.map(o=>o.code);
     if(Array.isArray(value)){const valid=value.filter(v=>codes.includes(v));if(valid.length)a[q.id]=valid;else delete a[q.id];}
     else if(value!==undefined&&!codes.includes(value))delete a[q.id];
@@ -223,7 +248,7 @@ export function responseStatus(q,value,shown){
 }
 export function exportSession(data,state,timing={}) {
   const r=derive(state.answers,state),path=pathFor(data,state),visible=new Set(path.flatMap(s=>s.question_ids||[])),order=path.filter(s=>s.kind==='choice').map(s=>s.id);
-  return {schema_version:data.meta.schema_version,instrument_version:data.meta.version,instrument_content_sha256:data.meta.content_sha256,record_kind:'instrument_test',test_purpose:state.test_purpose||'flow_review',complete:state.finished,
+  return {schema_version:data.meta.schema_version,instrument_version:data.meta.version,instrument_content_sha256:data.meta.content_sha256,...(state.layout_version?{layout_version:state.layout_version}:{}),record_kind:'instrument_test',test_purpose:state.test_purpose||'flow_review',complete:state.finished,
     session_id:state.session_id,seed:state.seed,created_at:state.created_at,settings:state.settings,site:data.sites.find(s=>s.code===state.answers['TEST-SITE-01'])?.id||null,
     language:'en',source_document_sha256:data.meta.source_sha256,answers:structuredClone(state.answers),response_status:Object.fromEntries(data.questions.map(q=>[q.id,responseStatus(q,state.answers[q.id],visible.has(q.id))])),
     route:{...r,journey_selection:'respondent_chosen'},displayed_question_ids:[...visible],benefit_order:shuffle([1,2,3,4],`${state.seed}:${r.technology}:benefits`).map(n=>data.benefits[r.technology]?.[n-1]?.id),

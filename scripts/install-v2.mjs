@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import {spawnSync} from 'node:child_process';
 import {parseJSONC,inspectProject,wranglerExecutable} from './cloudflare-project.mjs';
 import {validateInstrument,VERSION} from '../public/v2/engine.mjs';
+import {COMPACT_LAYOUT} from '../public/v2/layout.mjs';
 import {verifyLive} from './verify-v2-live.mjs';
 
 const SOURCE=fileURLToPath(new URL('../',import.meta.url));
@@ -103,13 +104,17 @@ async function main(){
   fs.mkdirSync(path.dirname(plan.manifestPath),{recursive:true});fs.writeFileSync(plan.manifestPath,JSON.stringify({version:VERSION,original_main:plan.originalMain,backup:saved},null,2)+'\n');
   for(const [relative,bytes]of Object.entries(plan.content))if(digest(fs.readFileSync(path.join(p.root,relative)))!==digest(bytes))throw new Error('Installed bytes differ from the release. Stop before deploying.');
   if(digest(fs.readFileSync(path.resolve(p.root,plan.originalMain)))!==plan.originalHash)throw new Error('The original Worker source changed. Stop before deploying.');
-  for(const file of [MAIN,'worker/v2-handler.mjs','public/v2/engine.mjs','public/v2/app.mjs']){const result=spawnSync(process.execPath,['--check',path.join(p.root,file)],{encoding:'utf8'});if(result.status!==0)throw new Error(result.stderr||'Syntax check failed.');}
+  for(const file of [MAIN,'worker/v2-handler.mjs','public/v2/engine.mjs','public/v2/layout.mjs','public/v2/matrix.mjs','public/v2/app.mjs']){const result=spawnSync(process.execPath,['--check',path.join(p.root,file)],{encoding:'utf8'});if(result.status!==0)throw new Error(result.stderr||'Syntax check failed.');}
   console.log(`Installed and verified v2. Backup: ${saved}`);
   if(!options.deploy){console.log('No Cloudflare operation was performed. Use --apply --deploy to initialise test storage and publish.');return;}
   if(options.collect){
-    run(p,['d1','execute',target.database,'--remote','--file','migrations/0002_survey_v2_test.sql'],{inherit:true});
-    const columns=query(p,target.database,"PRAGMA table_info('survey_v2_test_submissions')").map(x=>x.name);
     const expected=['id','received_at','instrument_version','schema_version','record_kind','site','language','technology','respondent_route','active_ms','payload_sha256','payload_json'];
+    const current=query(p,target.database,"PRAGMA table_info('survey_v2_test_submissions')").map(x=>x.name);
+    if(current.length&&JSON.stringify(current)!==JSON.stringify(expected))throw new Error('The v2 test table has an unexpected schema. Publication stopped.');
+    const indexes=query(p,target.database,"SELECT name FROM sqlite_master WHERE type='index' AND name IN ('idx_survey_v2_test_version_time','idx_survey_v2_test_site_route')");
+    if(!current.length||indexes.length!==2)run(p,['d1','execute',target.database,'--remote','--file','migrations/0002_survey_v2_test.sql'],{inherit:true});
+    else console.log('Existing v2 test table and indexes are ready; no database import is needed.');
+    const columns=query(p,target.database,"PRAGMA table_info('survey_v2_test_submissions')").map(x=>x.name);
     if(JSON.stringify(columns)!==JSON.stringify(expected))throw new Error('The v2 test table has an unexpected schema. Publication stopped.');
     const after=query(p,target.database,"SELECT name,type,sql FROM sqlite_master WHERE name='submissions' OR name LIKE 'idx_submissions_%' ORDER BY name");
     if(JSON.stringify(oldSchema)!==JSON.stringify(after))throw new Error('The existing submissions schema changed. Publication stopped.');
@@ -122,19 +127,13 @@ async function main(){
   const check=spawnSync('npm',['run','check'],{cwd:p.root,stdio:'inherit'});if(check.status!==0)throw new Error('The configured project check failed. Publication stopped.');
   run(p,['deploy','--keep-vars'],{inherit:true});
   const live='https://pulse-conjoint-survey.tom-tamlander.workers.dev';
-  let response,lastError;for(let attempt=0;attempt<5;attempt++){
-    try{const result=await fetch(live+'/api/v2/config?release='+Date.now(),{cache:'no-store'});response=await result.json();if(response.instrument_version===VERSION&&response.collection_enabled===options.collect)break;}catch(e){lastError=e.message;}
-    await new Promise(resolve=>setTimeout(resolve,1500));
-  }
-  if(response?.instrument_version!==VERSION||response.collection_enabled!==options.collect)throw new Error('Deployment ran, but live v2 readiness is not confirmed. '+(lastError||'Check /api/v2/config.'));
-  let probe=null;
+  const probe=await verifyLive(live,{writeTest:options.collect,expectedCollection:options.collect});
   if(options.collect){
-    probe=await verifyLive(live,{writeTest:true});
     if(!uuid.test(probe.deployment_check_receipt))throw new Error('Unexpected verification receipt.');
-    const rows=query(p,target.database,`SELECT id,record_kind,instrument_version,json_extract(payload_json,'$.test_purpose') AS test_purpose FROM survey_v2_test_submissions WHERE id='${probe.deployment_check_receipt}'`);
-    if(rows.length!==1||rows[0].test_purpose!=='deployment_check'||rows[0].instrument_version!==VERSION)throw new Error('The deployment-check receipt could not be confirmed in the separate survey database.');
+    const rows=query(p,target.database,`SELECT id,record_kind,instrument_version,json_extract(payload_json,'$.test_purpose') AS test_purpose,json_extract(payload_json,'$.layout_version') AS layout_version FROM survey_v2_test_submissions WHERE id='${probe.deployment_check_receipt}'`);
+    if(rows.length!==1||rows[0].test_purpose!=='deployment_check'||rows[0].instrument_version!==VERSION||rows[0].layout_version!==COMPACT_LAYOUT)throw new Error('The deployment-check receipt and layout could not be confirmed in the separate survey database.');
   }
-  console.log(JSON.stringify({published:true,url:live+'/v2/',instrument_version:response.instrument_version,test_collection_enabled:response.collection_enabled,storage_ready:response.storage_ready,deployment_check:probe,backup:saved},null,2));
+  console.log(JSON.stringify({published:true,url:live+'/v2/',instrument_version:probe.instrument_version,layout_version:probe.layout_version,test_collection_enabled:probe.collection_enabled,storage_ready:probe.storage_ready,deployment_check:options.collect?probe:null,backup:saved},null,2));
   console.log('Ready for your browser flow test. The single deployment-check record is labelled and excluded by the analysis pipeline.');
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))main().catch(e=>{console.error(e.message);process.exitCode=1;});

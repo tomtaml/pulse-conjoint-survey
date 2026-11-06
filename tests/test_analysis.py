@@ -12,6 +12,27 @@ spec.loader.exec_module(module)
 
 
 class PreparationTests(unittest.TestCase):
+    def test_layout_is_metadata_for_both_legacy_and_compact_exports(self):
+        instrument = json.loads((ROOT / 'public/v2/survey.json').read_text())
+        base = {'schema_version': instrument['meta']['schema_version'], 'instrument_version': instrument['meta']['version'], 'instrument_content_sha256': instrument['meta']['content_sha256'],
+                'record_kind': 'instrument_test', 'complete': True, 'site': 'tampere', 'seed': 1, 'settings': {},
+                'route': {'technology': 'wpt', 'privateRoute': True, 'combTarget': 'current_condition_option'}, 'answers': {}, 'choices': []}
+        records = [{**base, 'session_id': 'legacy'}, {**base, 'session_id': 'compact', 'layout_version': 'compact-2026-11-06', 'settings': {'review_both_dce': True}}]
+        with tempfile.TemporaryDirectory(dir=ROOT, prefix='.guard-test-analysis-') as temp:
+            temp = Path(temp)
+            source = temp / 'layouts.json'
+            source.write_text(json.dumps(records))
+            report = module.prepare([source], temp / 'out', include_tests=True)
+            self.assertEqual(report['layout_versions'], {'compact-2026-11-06': 1, 'pages-2026-11-04': 1})
+            self.assertEqual(report['dce_review_modes'], {'both_drivers': 1, 'single': 1})
+            with (temp / 'out/participants.csv').open(encoding='utf-8-sig') as f:
+                rows = list(csv.DictReader(f))
+            self.assertEqual([r['layout_version'] for r in rows], ['pages-2026-11-04', 'compact-2026-11-06'])
+            self.assertEqual([r['dce_review_mode'] for r in rows], ['single', 'both_drivers'])
+            source.write_text(json.dumps([records[0], {**records[1], 'session_id': 'legacy'}]))
+            with self.assertRaisesRegex(ValueError, 'Conflicting records'):
+                module.prepare([source], temp / 'conflict', include_tests=True)
+
     def test_baseline_and_repeated_intention_are_scored_at_separate_occasions(self):
         instrument = json.loads((ROOT / 'public/v2/survey.json').read_text())
         answers = {q['id']: 4 for q in instrument['questions'] if q.get('construct') in ['E-W-USE', 'E-W-EASE', 'E-W-ATT', 'E-W-BI', 'F-X-TRUST'] and q.get('occasion') != 'post_information'}

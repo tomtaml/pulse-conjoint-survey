@@ -1,5 +1,17 @@
 # PULSE v2 instrument test release
 
+## Compact presentation update, 6 November 2026
+
+New tests use shared response grids, up to six statements at a time, with construct subheadings and separate uncertainty/non-response options. Related end questions, journey descriptors and household questions share pages. Count responses keep their codes and are displayed as numeric inputs. Original wording, scales, question IDs, routing, theoretical membership and all DCE card values remain unchanged.
+
+`layout_version=compact-2026-11-06` distinguishes this presentation from the original pages. Old sessions and submissions remain supported. The instrument version and content fingerprint do not change because `survey.json` is byte-identical. The optional layout marker is stored inside `payload_json`; no new D1 schema is required. Python/MATLAB preparation treats layout as metadata, rather than a behavioural feature.
+
+The partner routing guide is `/v2/routing.html` and [ROUTING.md](ROUTING.md). With the existing test table and indexes, installation skips the SQL import. Deployment readiness waits for the new layout to propagate before writing its labelled verification record. The established Worker/database targets and collection controls are preserved.
+
+`/v2/?dce=both-drivers` is a separate partner-review option. Current drivers who are privately eligible for both services can compare both DCEs, each behind its own scenario gate. The assigned service goes first and retains the sole household acceptance battery; after the additional comparison, follow-up explicitly returns to that service. Maximum burden is 16 scored choices plus three practices, compared with the ordinary 10 plus two. Non-car respondents keep transport and meaningful household/future-service choices, with public views otherwise. The review flag is stored and exported as metadata, and old/default responses remain unchanged.
+
+Browser visual QA for this update remains pending because managed preview infrastructure is unavailable. Automated routing, scale, keyboard-control markup, timing, layout compatibility and old-record checks are available in the test suite.
+
 This release implements an A0.8-derived A0.9 test draft for respondent-flow review. It is not a frozen fieldwork instrument or an optimised design. GitHub source and Cloudflare publication are separate: the original repository kept the working backend/configuration in the owner's configured local project.
 
 ## Flow and scope
@@ -31,7 +43,7 @@ The procedure accepts only Worker `pulse-conjoint-survey`, database `pulse_conjo
 
 Overwritten files are backed up. The original Worker source is byte-identical; an adapter handles only `/api/v2/*` and delegates other requests. Configuration/bindings remain intact except the new entrypoint, necessary v2 API routing and `SURVEY_V2_COLLECTION_ENABLED`. Legacy `COLLECTION_ENABLED`, free-text rules, environment and Turnstile variables are preserved.
 
-Only `survey_v2_test_submissions` and its indexes are added. Legacy submissions are not copied, migrated or modified. With the established development test sitekey, a separate v2-only official dummy validation secret is added if absent; existing secrets are retained. The configured project checks run, followed by deployment with `--keep-vars`.
+Only `survey_v2_test_submissions` and its indexes are added when absent; an initialized test database skips the import. Legacy submissions are not copied, migrated or modified. With the established development test sitekey, a separate v2-only official dummy validation secret is added if absent; existing secrets are retained. The configured project checks run, followed by deployment with `--keep-vars`.
 
 After publication the installer checks live v2 configuration, saves one labelled `deployment_check` record via the actual API and reads back only its receipt metadata from the target D1. The analysis pipeline always excludes this probe. This confirms API/D1 persistence; browser flow still needs review. Other Workers/account rules are outside the operation.
 

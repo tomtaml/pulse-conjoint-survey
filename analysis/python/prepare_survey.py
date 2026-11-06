@@ -10,6 +10,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+LEGACY_LAYOUT = 'pages-2026-11-04'
 
 
 def unpack(value):
@@ -74,7 +75,7 @@ def prepare(inputs, output, include_tests=False, include_synthetic=False):
             if kind not in ['instrument_test', 'synthetic', 'study_response']:
                 raise ValueError('Unknown record origin; it must be classified before analysis.')
             identity = record['session_id']
-            signature = json.dumps({k: record.get(k) for k in ['instrument_version', 'answers', 'choices', 'seed', 'settings']}, sort_keys=True)
+            signature = json.dumps({**{k: record.get(k) for k in ['instrument_version', 'answers', 'choices', 'seed', 'settings']}, 'layout_version': record.get('layout_version') or LEGACY_LAYOUT}, sort_keys=True)
             if identity in seen:
                 if seen[identity] != signature:
                     raise ValueError('Conflicting records share a session identifier.')
@@ -87,10 +88,11 @@ def prepare(inputs, output, include_tests=False, include_synthetic=False):
         raise ValueError('Analysis outputs must not be written into public assets.')
     output.mkdir(parents=True, exist_ok=True)
     participants, answer_rows, wide, scores, choice_rows = [], [], [], [], []
-    metadata = ['session_id', 'record_kind', 'test_purpose', 'complete', 'instrument_version', 'site', 'technology', 'respondent_route', 'comb_target', 'active_ms']
+    metadata = ['session_id', 'record_kind', 'test_purpose', 'complete', 'instrument_version', 'layout_version', 'dce_review_mode', 'site', 'technology', 'respondent_route', 'comb_target', 'active_ms']
     for record in records:
         route, answers = record['route'], record['answers']
         meta = {'session_id': record['session_id'], 'record_kind': record['record_kind'], 'test_purpose': record.get('test_purpose', ''), 'complete': int(bool(record.get('complete'))), 'instrument_version': record['instrument_version'],
+                'layout_version': record.get('layout_version') or LEGACY_LAYOUT, 'dce_review_mode': 'both_drivers' if record.get('settings', {}).get('review_both_dce') is True else 'single',
                 'site': record['site'], 'technology': route['technology'], 'respondent_route': 'private' if route['privateRoute'] else 'public',
                 'comb_target': route.get('combTarget', ''), 'active_ms': record.get('timing', {}).get('active_ms', '')}
         participants.append(meta)
@@ -138,6 +140,8 @@ def prepare(inputs, output, include_tests=False, include_synthetic=False):
         model_counts[model] = len(selected)
     report = {'schema_version': instrument['meta']['schema_version'], 'instrument_version': instrument['meta']['version'],
               'records': len(records), 'excluded': excluded, 'model_complete_cases': model_counts,
+              'layout_versions': {layout: sum((r.get('layout_version') or LEGACY_LAYOUT) == layout for r in records) for layout in sorted({r.get('layout_version') or LEGACY_LAYOUT for r in records})},
+              'dce_review_modes': {mode: sum(('both_drivers' if r.get('settings', {}).get('review_both_dce') is True else 'single') == mode for r in records) for mode in sorted({'both_drivers' if r.get('settings', {}).get('review_both_dce') is True else 'single' for r in records})},
               'input_sha256': input_hashes, 'test_data_included': include_tests, 'synthetic_data_included': include_synthetic,
               'scoring': 'Candidate mean only when every indicator is a valid scale answer; no route-skip or missing-code imputation.',
               'models_fitted': False, 'population_weights': None, 'population_representativeness': 'not established',

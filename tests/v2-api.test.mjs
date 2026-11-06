@@ -28,6 +28,16 @@ test('valid collection writes only the new test table and gives idempotent recei
   const row=e.DB.db.prepare(`SELECT payload_json FROM ${TABLE}`).get();assert.equal(JSON.parse(row.payload_json).instrument_version,data.meta.version);
   const different=structuredClone(p);different.answers['H-FIN-01']=2;assert.equal((await handler(request(different),e)).status,409);
 });
+test('driver comparison is stored with both DCE blocks, its mode flag and review timing',async()=>{
+  const e=env(),handler=createV2Handler(data,{fetcher:verification});
+  const p=payload(complete({}, {technology_override:'wpt',review_both_dce:true}));
+  p.timing={active_ms:1250,by_step_ms:{'intro-review-v2g-concept':1250},visits:{'intro-review-v2g-concept':1}};
+  assert.equal((await handler(request(p),e)).status,201);
+  const stored=JSON.parse(e.DB.db.prepare(`SELECT payload_json FROM ${TABLE}`).get().payload_json);
+  assert.equal(stored.settings.review_both_dce,true);assert.deepEqual(stored.route.technologyChoiceBlocks,['wpt','v2g']);
+  assert.equal(stored.choices.filter(c=>c.status==='answered').length,19);assert.equal(stored.timing.by_section_ms.G,1250);
+  const bad={...p,settings:{...p.settings,review_both_dce:'true'}};assert.throws(()=>validatePayload(data,bad),/configuration/);
+});
 test('collection flags, consent, origin, verification, types and size fail closed',async()=>{
   const e=env(),h=createV2Handler(data,{fetcher:verification}),p=payload(complete());
   assert.equal((await h(request(p),{...e,SURVEY_V2_COLLECTION_ENABLED:'false'})).status,503);
