@@ -1,4 +1,5 @@
-import {VERSION,derive,pathFor,taskSnapshot,cleanState,allErrors,exportSession,canonical,settingsFromURL,SECTION_NAMES} from '../public/v2/engine.mjs';
+import {VERSION,derive,pathFor,taskSnapshot,cleanState,allErrors,exportSession,canonical,settingsFromURL,SECTION_NAMES,REVIEW_TIMING_IDS} from '../public/v2/engine.mjs';
+import {COMPACT_LAYOUT,COMPACT_PAGES,SUPPORTED_LAYOUTS,layoutOf} from '../public/v2/layout.mjs';
 
 export const TABLE='survey_v2_test_submissions';
 export const MAX_BYTES=131072;
@@ -14,11 +15,13 @@ const validNumber=n=>Number.isSafeInteger(n)&&n>=0;
 export function validatePayload(data,payload) {
   if(!plain(payload)||payload.instrument_version!==VERSION||payload.schema_version!==data.meta.schema_version||payload.record_kind!=='instrument_test'||payload.complete!==true)throw new Error('This test session uses an unsupported instrument version or is incomplete.');
   if(payload.instrument_content_sha256!==data.meta.content_sha256)throw new Error('The questionnaire content has changed. Start a fresh test with the current version.');
+  if(payload.layout_version!==undefined&&!SUPPORTED_LAYOUTS.includes(payload.layout_version))throw new Error('Unsupported questionnaire layout. Reload the test.');
   if(!['flow_review','deployment_check'].includes(payload.test_purpose))throw new Error('Invalid instrument-test purpose.');
   if(!UUID.test(payload.session_id||'')||!Number.isInteger(payload.seed)||payload.seed<0||payload.seed>4294967295)throw new Error('Invalid test-session identifier.');
   if(typeof payload.created_at!=='string'||!/^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3}Z$/.test(payload.created_at)||!Number.isFinite(Date.parse(payload.created_at)))throw new Error('Invalid test timestamp.');
-  if(!plain(payload.settings)||Object.keys(payload.settings).some(k=>!settingsKeys.includes(k)))throw new Error('Invalid test configuration.');
+  if(!plain(payload.settings)||Object.keys(payload.settings).some(k=>!settingsKeys.includes(k)&&k!=='review_both_dce'))throw new Error('Invalid test configuration.');
   for(const key of settingsKeys)if(key==='technology_override'?![null,'wpt','v2g'].includes(payload.settings[key]):typeof payload.settings[key]!=='boolean')throw new Error('Invalid test configuration.');
+  if(Object.hasOwn(payload.settings,'review_both_dce')&&typeof payload.settings.review_both_dce!=='boolean')throw new Error('Invalid test configuration.');
   if(!plain(payload.answers)||Object.keys(payload.answers).length>data.questions.length)throw new Error('Invalid answer object.');
   const qmap=new Map(data.questions.map(q=>[q.id,q]));
   for(const [id,value]of Object.entries(payload.answers)){
@@ -26,7 +29,7 @@ export function validatePayload(data,payload) {
     if(!(Number.isInteger(value)||(Array.isArray(value)&&value.length<=20&&value.every(Number.isInteger))))throw new Error('Only coded closed answers are accepted.');
   }
   if(payload.answers['TEST-CONSENT-01']!==1||payload.answers['TEST-ADULT-01']!==1||![1,2,3].includes(payload.answers['TEST-SITE-01']))throw new Error('Adult test consent and a test site are required.');
-  const state={version:2,session_id:payload.session_id,test_purpose:payload.test_purpose,seed:payload.seed,settings:payload.settings,created_at:payload.created_at,answers:structuredClone(payload.answers),choices:{},choiceSnapshots:{},checks:{},seen:[],finished:true,notes:{}};
+  const state={version:2,...(payload.layout_version?{layout_version:payload.layout_version}:{}),session_id:payload.session_id,test_purpose:payload.test_purpose,seed:payload.seed,settings:payload.settings,created_at:payload.created_at,answers:structuredClone(payload.answers),choices:{},choiceSnapshots:{},checks:{},seen:[],finished:true,notes:{}};
   const path=pathFor(data,state),taskSteps=path.filter(s=>s.kind==='choice'),activeTasks=new Map(taskSteps.map(s=>[s.id,s.task]));
   if(!Array.isArray(payload.choices)||payload.choices.length!==data.tasks.length||new Set(payload.choices.map(t=>t?.task_id)).size!==data.tasks.length)throw new Error('Invalid choice-task records.');
   for(const row of payload.choices){
@@ -58,6 +61,8 @@ export function validateTiming(data,state,timing){
   const sectionById=new Map(data.questions.map(q=>[q.id,q.section]));
   for(const g of data.groups)sectionById.set(g.id,g.section);
   for(const t of data.tasks)sectionById.set(t.id,t.section);
+  if(layoutOf(state)===COMPACT_LAYOUT)for(const page of COMPACT_PAGES)sectionById.set(page.id,page.section);
+  if(state.settings?.review_both_dce===true)for(const id of REVIEW_TIMING_IDS)sectionById.set(id,'G');
   const intros={A:'A',journey:'A',purposes:'A',B:'B',scenario:'B',C:'C',D:'D',S:'S',E:'E',wpt:'E',v2g:'E',positioning:'E',F:'F',wpt_gate:'G',wpt_terms:'G',v2g_terms:'G',v2g_payment:'G',public:'G',benefits:'G',information:'G',values:'V',H:'H',declined:'S','not-adult':'S'};
   for(const [key,section]of Object.entries(intros))sectionById.set(`intro-${key}`,section);
   if(Object.keys(timing.by_step_ms).length>500||Object.keys(timing.visits).length>500)throw new Error('Invalid timing data.');
@@ -88,7 +93,7 @@ export function createV2Handler(data,{fetcher=globalThis.fetch,now=()=>new Date(
     if(!path.startsWith('/api/v2/'))return null;
     if(path==='/api/v2/config'&&request.method==='GET'){
       let storage=false;if(requested(env)&&env.DB&&secret(env)){try{storage=!!await env.DB.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name=?").bind(TABLE).first();}catch{}}
-      return json({instrument_version:VERSION,instrument_content_sha256:data.meta.content_sha256,schema_version:data.meta.schema_version,mode:'instrument_test',collection_enabled:requested(env)&&!!secret(env)&&storage,
+      return json({instrument_version:VERSION,instrument_content_sha256:data.meta.content_sha256,schema_version:data.meta.schema_version,layout_version:COMPACT_LAYOUT,supported_layout_versions:SUPPORTED_LAYOUTS,capabilities:{driver_dce_comparison:true},mode:'instrument_test',collection_enabled:requested(env)&&!!secret(env)&&storage,
         turnstile_site_key:env.TURNSTILE_SITE_KEY||null,storage_ready:storage,max_payload_bytes:MAX_BYTES,free_text_enabled:false});
     }
     if(path!=='/api/v2/submissions')return fail(404,'not_found','This test endpoint is not available.');
