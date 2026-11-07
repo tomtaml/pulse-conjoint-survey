@@ -1,0 +1,602 @@
+{
+  "status": "candidate_for_cognitive_review_not_approved",
+  "source_version": "pulse-v2-A0.9-test-2026-11-04",
+  "source_sha": "41a08c59fb06b8fc7385afb76da8fa78a37be7ac3d79affc6e7bea6dd3bc1633",
+  "common_candidate_reuses": [
+    {
+      "source_id": "C-PSYC-01",
+      "source_wording": "I know how to plan this journey using [MODE].",
+      "source_route": "alternative",
+      "scale": [
+        {
+          "code": 1,
+          "label": "Strongly disagree"
+        },
+        {
+          "code": 2,
+          "label": "Disagree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Agree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 97,
+          "label": "Not applicable"
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge"
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer"
+        }
+      ],
+      "decision": "candidate core; adapt carefully for non-car and no-alternative cases",
+      "v3_id": "M3-PSYC-01"
+    },
+    {
+      "source_id": "C-PSYC-03",
+      "source_wording": "I know how to adjust my travel plans if something unexpected disrupts this journey using [MODE].",
+      "source_route": "alternative",
+      "scale": [
+        {
+          "code": 1,
+          "label": "Strongly disagree"
+        },
+        {
+          "code": 2,
+          "label": "Disagree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Agree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 97,
+          "label": "Not applicable"
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge"
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer"
+        }
+      ],
+      "decision": "candidate core; adapt carefully for non-car and no-alternative cases",
+      "v3_id": "M3-PSYC-03"
+    },
+    {
+      "source_id": "C-POPP-01",
+      "source_wording": "A realistic route or service for making this journey using [MODE] is available where I live.",
+      "source_route": "alternative",
+      "scale": [
+        {
+          "code": 1,
+          "label": "Strongly disagree"
+        },
+        {
+          "code": 2,
+          "label": "Disagree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Agree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 97,
+          "label": "Not applicable"
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge"
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer"
+        }
+      ],
+      "decision": "candidate core; adapt carefully for non-car and no-alternative cases",
+      "v3_id": "M3-POPP-01"
+    },
+    {
+      "source_id": "C-POPP-02",
+      "source_wording": "The routes or services required to use [MODE] are available at the times I normally need to travel.",
+      "source_route": "alternative",
+      "scale": [
+        {
+          "code": 1,
+          "label": "Strongly disagree"
+        },
+        {
+          "code": 2,
+          "label": "Disagree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Agree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 97,
+          "label": "Not applicable"
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge"
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer"
+        }
+      ],
+      "decision": "candidate core; adapt carefully for non-car and no-alternative cases",
+      "v3_id": "M3-POPP-02"
+    },
+    {
+      "source_id": "C-SOPP-01",
+      "source_wording": "People important to me would support my using [MODE] for this journey.",
+      "source_route": "alternative",
+      "scale": [
+        {
+          "code": 1,
+          "label": "Strongly disagree"
+        },
+        {
+          "code": 2,
+          "label": "Disagree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Agree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 97,
+          "label": "Not applicable"
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge"
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer"
+        }
+      ],
+      "decision": "candidate core; adapt carefully for non-car and no-alternative cases",
+      "v3_id": "M3-SOPP-01"
+    },
+    {
+      "source_id": "C-SOPP-03",
+      "source_wording": "People close to me would encourage me to use [MODE] for journeys like this.",
+      "source_route": "alternative",
+      "scale": [
+        {
+          "code": 1,
+          "label": "Strongly disagree"
+        },
+        {
+          "code": 2,
+          "label": "Disagree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Agree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 97,
+          "label": "Not applicable"
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge"
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer"
+        }
+      ],
+      "decision": "candidate core; adapt carefully for non-car and no-alternative cases",
+      "v3_id": "M3-SOPP-03"
+    },
+    {
+      "source_id": "C-RMOT-01",
+      "source_wording": "Using [MODE] for this journey would be a good choice for me.",
+      "source_route": "alternative",
+      "scale": [
+        {
+          "code": 1,
+          "label": "Strongly disagree"
+        },
+        {
+          "code": 2,
+          "label": "Disagree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Agree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 97,
+          "label": "Not applicable"
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge"
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer"
+        }
+      ],
+      "decision": "candidate core; adapt carefully for non-car and no-alternative cases",
+      "v3_id": "M3-RMOT-01"
+    },
+    {
+      "source_id": "C-RMOT-02",
+      "source_wording": "The advantages of using [MODE] for this journey would outweigh the disadvantages.",
+      "source_route": "alternative",
+      "scale": [
+        {
+          "code": 1,
+          "label": "Strongly disagree"
+        },
+        {
+          "code": 2,
+          "label": "Disagree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Agree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 97,
+          "label": "Not applicable"
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge"
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer"
+        }
+      ],
+      "decision": "candidate core; adapt carefully for non-car and no-alternative cases",
+      "v3_id": "M3-RMOT-02"
+    },
+    {
+      "source_id": "C-HAB-01",
+      "source_wording": "When making this journey, I tend to choose [CURRENT MODE] automatically.",
+      "source_route": "habit",
+      "scale": [
+        {
+          "code": 1,
+          "label": "Strongly disagree"
+        },
+        {
+          "code": 2,
+          "label": "Disagree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Agree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 97,
+          "label": "Not applicable"
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge"
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer"
+        }
+      ],
+      "decision": "retain current-mode habit, candidate shorten to 2",
+      "v3_id": "M3-HAB-01"
+    },
+    {
+      "source_id": "C-HAB-02",
+      "source_wording": "I usually choose [CURRENT MODE] for this journey without consciously considering other options.",
+      "source_route": "habit",
+      "scale": [
+        {
+          "code": 1,
+          "label": "Strongly disagree"
+        },
+        {
+          "code": 2,
+          "label": "Disagree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Agree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 97,
+          "label": "Not applicable"
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge"
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer"
+        }
+      ],
+      "decision": "retain current-mode habit, candidate shorten to 2",
+      "v3_id": "M3-HAB-02"
+    },
+    {
+      "source_id": "C-INT-01",
+      "source_wording": "I intend to use [MODE] for this journey during the next four weeks.",
+      "source_route": "intention",
+      "scale": [
+        {
+          "code": 1,
+          "label": "Strongly disagree"
+        },
+        {
+          "code": 2,
+          "label": "Disagree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Agree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 97,
+          "label": "Not applicable"
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge"
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer"
+        }
+      ],
+      "decision": "conditional intention outcome; not common scale",
+      "v3_id": "M3-INT-01"
+    },
+    {
+      "source_id": "C-INT-02",
+      "source_wording": "I plan to use [MODE] for this journey during the next four weeks.",
+      "source_route": "intention",
+      "scale": [
+        {
+          "code": 1,
+          "label": "Strongly disagree"
+        },
+        {
+          "code": 2,
+          "label": "Disagree"
+        },
+        {
+          "code": 3,
+          "label": "Neither agree nor disagree"
+        },
+        {
+          "code": 4,
+          "label": "Agree"
+        },
+        {
+          "code": 5,
+          "label": "Strongly agree"
+        },
+        {
+          "code": 97,
+          "label": "Not applicable"
+        },
+        {
+          "code": 98,
+          "label": "Cannot judge"
+        },
+        {
+          "code": 99,
+          "label": "Prefer not to answer"
+        }
+      ],
+      "decision": "conditional intention outcome; not common scale",
+      "v3_id": "M3-INT-02"
+    }
+  ],
+  "other_existing_C_items": [
+    {
+      "id": "C-ALT-01",
+      "route": "has_journey",
+      "decision": "audit before shortening"
+    },
+    {
+      "id": "C-ALT-02",
+      "route": "conditional_mode",
+      "decision": "audit before shortening"
+    },
+    {
+      "id": "C-ALT-USED",
+      "route": "confirm_used_mode",
+      "decision": "audit before shortening"
+    },
+    {
+      "id": "C-PCAP-01",
+      "route": "alternative",
+      "decision": "reserve physical capability; accessibility gate may be more useful"
+    },
+    {
+      "id": "C-PCAP-02",
+      "route": "alternative",
+      "decision": "reserve physical capability; accessibility gate may be more useful"
+    },
+    {
+      "id": "C-PCAP-03",
+      "route": "alternative",
+      "decision": "reserve physical capability; accessibility gate may be more useful"
+    },
+    {
+      "id": "C-PSYC-02",
+      "route": "alternative",
+      "decision": "audit before shortening"
+    },
+    {
+      "id": "C-POPP-03",
+      "route": "alternative",
+      "decision": "audit before shortening"
+    },
+    {
+      "id": "C-SOPP-02",
+      "route": "alternative",
+      "decision": "audit before shortening"
+    },
+    {
+      "id": "C-RMOT-03",
+      "route": "alternative",
+      "decision": "audit before shortening"
+    },
+    {
+      "id": "C-HAB-03",
+      "route": "habit",
+      "decision": "audit before shortening"
+    },
+    {
+      "id": "C-HAB-04",
+      "route": "habit",
+      "decision": "audit before shortening"
+    },
+    {
+      "id": "C-INT-03",
+      "route": "intention",
+      "decision": "audit before shortening"
+    },
+    {
+      "id": "C-BEH-01",
+      "route": "alternative",
+      "decision": "retain observed behaviour"
+    },
+    {
+      "id": "C-BEH-02",
+      "route": "intention",
+      "decision": "retain observed behaviour"
+    },
+    {
+      "id": "C-CTX-01",
+      "route": "alternative",
+      "decision": "audit before shortening"
+    },
+    {
+      "id": "C-COND-01",
+      "route": "named_conditional",
+      "decision": "audit before shortening"
+    },
+    {
+      "id": "C-NOALT-BAR-01",
+      "route": "no_alternative",
+      "decision": "audit before shortening"
+    },
+    {
+      "id": "C-CONV-01",
+      "route": "convenience",
+      "decision": "audit before shortening"
+    },
+    {
+      "id": "C-PLAN-EFFORT-01",
+      "route": "convenience",
+      "decision": "audit before shortening"
+    }
+  ],
+  "note": "Not a complete replacement of COM-B; no new wording should be treated as validated."
+}
