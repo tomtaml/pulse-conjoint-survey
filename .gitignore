@@ -32,4 +32,7 @@ analysis/data/
 analysis/output/
 pulse-v2-test-session*.json
 pulse-v2-comments-and-timing*.md
+pulse-v3-test-session*.json
+pulse-v3-comments-and-timing*.md
+.v3-build/
 *.ndjson

@@ -1,5 +1,7 @@
 # PULSE conjoint survey
 
+The Option C review release adds a separate `/v3/` instrument and test collection endpoint. See the [v3 release and routing guide](docs/V3_RELEASE.md) for deployment and verification.
+
 Version 2 implements the A0.8-derived A0.9 questionnaire test: routed travel/COM-B, one WPT or V2G acceptance module and technology DCE, a public/non-user path, four benefit priorities and isolated instrument-test collection.
 
 The earlier online v1 is preserved at /v1/. After deployment the root opens /v2/. Source publication in GitHub does not by itself update the Cloudflare Worker: use the already configured local Cloudflare project below.
